@@ -1,0 +1,22 @@
+{
+  "name": "plantilla",
+  "version": "1.0.0",
+  "description": "Plantilla Inproext",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Html5",
+    "Angular.Js",
+    "Sass"
+  ],
+  "author": "Ivan Orlando Lamprea Guerrero",
+  "license": "MIT",
+  "devDependencies": {
+    "es6-promise": "^3.1.2",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-noprotocol": "^0.7.0"
+  }
+}

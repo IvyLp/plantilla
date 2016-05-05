@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,KAEE,kBAAmB,CAFrB,SAKI,YACA,aACA,eACA,2BAA6B,CAC9B","file":"style.css","sourcesContent":["body\r\n{\r\n  background:#cecece;\r\n  div\r\n  {\r\n    width:100px;\r\n    height: 100px;\r\n    background:red;\r\n    box-shadow: 10px 10px 0 #000;\r\n  }\r\n}\r\n"],"sourceRoot":"/source/"}
