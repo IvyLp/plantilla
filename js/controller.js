@@ -6,5 +6,6 @@ angular.module('plantilla')
         }
     })
     .controller('hCtrl',function($scope){
-
+        $scope.count=false;
+        console.log($scope.count);
     });

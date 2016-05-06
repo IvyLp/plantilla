@@ -5,51 +5,118 @@
 }
 body
 {
-  background:#fff7f7;
-  section
-  {
-    position:absolute;
-    top:50%;
-    left:50%;
-    width:1000px;
-    height: 600px;
-    margin:-300px -500px;
-    border:1px solid red;
+  background-image: url("../img/bkg.png");
+  section {
 
-    .modalP
-    {
-      transition: all linear .5s;
-      position:absolute;
-      top:0;
-      left:0;
-      width: 100%;
-      height:600px;
-      transform:scale(1,1);
-      background:red;
-    }
-    .ng-hide
-    {
-      opacity:0;
-      transform:scale(0,0);
-    }
+    .section {
+      position: absolute;
+      width: 1170px;
+      top: 50%;
+      margin-top: -300px;
+      height: 600px;
+      overflow: hidden;
 
+      .modalP {
+        transition: all linear .5s;
+        -sand-transition: all linear .5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px;
+        -sand-transform: scale(1, 1);
+        transform: scale(1, 1);
+        background: #fff;
+      }
+      .ng-hide {
+        opacity: 0;
+        -sand-transform: scale(0, 0);
+        transform: scale(0, 0);
+      }
+      .slide {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        animation-name: example;
+        animation-duration: 3s;
+      }
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        top: 50%;
+        left: 0;
+        margin: -300px 0;
+        .slide {
+          position: relative;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0;
+        .slide {
+          position: relative;
+        }
+      }
+    }
   }
 }
-.item
-{
-  height: 188px;
-}
-.slide
+
+.btn-intro
 {
   position: absolute;
-  width:100%;
+  bottom:100px;
+  right: 85px;
+}
+
+.item
+{
+  position: relative;
+  width: 100%;
+  height: 284px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0 !important;
+  .item-title
+  {
+    position: absolute;
+    width:100%;
+    height:50%;
+    top:100%;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+    transition: top .3s linear;
+  }
+  &:hover
+  {
+    .item-title
+    {
+      top:50%;
+    }
+  }
+}
+/*Animaciones*/
+
+.animation-slide
+{
   animation-name: example;
-  animation-duration: .5s;
+  animation-duration: 3s;
 }
 
 @keyframes example {
-  from {width:0;left:1000px;opacity: 0;}
-  to {width:100%;left: 0px;opacity: 1};
+  from {left: 100%; opacity: 0;}
+  to {left:0; opacity:1;}
 }
 
+.animation-item
+{
+  animation: scaleitem .3s linear;
+}
 
+@keyframes scaleitem {
+  from {transform: scale(0,0);opacity: 0;}
+  to {transform: scale(1,1);opacity: 1;}
+}

@@ -1,8 +1,16 @@
-
-<h1>Presentacion</h1>
-
-<button ng-click="abrirModal(estado=!estado)" class="btn btn-info">Instrucciones</button>
-    <a href="#/home" class="btn btn-success"  ng-click="">Inicio</a>
+<div class="slide">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron" style="height: 600px;">
+                <h1>Presentación</h1>
+                <div class="btn-intro">
+                    <button ng-click="abrirModal(estado=!estado)" class="btn btn-info">Instrucciones</button>
+                    <button href="#/home" class="btn btn-success"  ng-click="">Inicio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div ng-show="bool" class="modalP">
     <button ng-click="abrirModal(estado=!estado)" class="btn btn-success">CERRAR</button>
