@@ -7,30 +7,31 @@ body
 {
   background-image: url("../img/bkg.png");
   section {
-
+    position: absolute;
+    width: 100%;
+    height:100%;
     .section {
       position: absolute;
       width: 1170px;
       top: 50%;
-      margin-top: -300px;
+      left:50%;
+      margin: -300px -585px;
       height: 600px;
       overflow: hidden;
 
       .modalP {
-        transition: all linear .5s;
-        -sand-transition: all linear .5s;
+        transition: linear .3s;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 600px;
-        -sand-transform: scale(1, 1);
         transform: scale(1, 1);
         background: #fff;
       }
       .ng-hide {
+        transition: linear .3s;
         opacity: 0;
-        -sand-transform: scale(0, 0);
         transform: scale(0, 0);
       }
       .slide {
@@ -65,6 +66,7 @@ body
   }
 }
 
+
 .btn-intro
 {
   position: absolute;
@@ -98,25 +100,17 @@ body
     }
   }
 }
-/*Animaciones*/
+/************************Animaciones*****************/
 
-.animation-slide
+
+.filter
 {
-  animation-name: example;
-  animation-duration: 3s;
+  background-color:rgba(0,0,0,.7);
+  animation: filter .3s linear;
 }
 
-@keyframes example {
-  from {left: 100%; opacity: 0;}
-  to {left:0; opacity:1;}
+@keyframes filter {
+  from {background-color:rgba(0,0,0,.0)}
+  to {background-color:rgba(0,0,0,.5)}
 }
 
-.animation-item
-{
-  animation: scaleitem .3s linear;
-}
-
-@keyframes scaleitem {
-  from {transform: scale(0,0);opacity: 0;}
-  to {transform: scale(1,1);opacity: 1;}
-}
