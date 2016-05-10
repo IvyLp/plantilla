@@ -16,9 +16,15 @@
                 controller: 'homeCtrl',
                 controllerAs: 'hCtrl'
             })
+            .when('/nav',{
+                templateUrl:'html/navigation.html',
+                controller: 'navigationCtrl',
+                controllerAs: 'nCtrl'
+            })
             .when('/home/a',{
                 templateUrl:'html/a.html',
-                controller:'aCtrl'
+                controller:'aCtrl',
+                controllerAs:'aCtrl'
             })
             .when('/home/b',{
                 templateUrl:'html/b.html',

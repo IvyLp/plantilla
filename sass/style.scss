@@ -5,7 +5,11 @@
 }
 body
 {
+  background-color:#000;
   background-image: url("../img/bkg.png");
+  background-position: center 0;
+  background-repeat:no-repeat;
+  background-size:1920px 1080px;
   section {
     position: absolute;
     width: 100%;
@@ -66,7 +70,21 @@ body
   }
 }
 
-
+.titulo{color:#fff;cursor: pointer;}
+.etiqueta
+{
+  height: 40px;
+  width: 340px;
+  background: #fff;
+  line-height: 40px;
+  text-align: center;
+  transform: skewX(-20deg);
+  cursor: pointer;
+  h2
+  {
+    transform: skewX(20deg);
+  }
+}
 .btn-intro
 {
   position: absolute;
@@ -114,3 +132,38 @@ body
   to {background-color:rgba(0,0,0,.5)}
 }
 
+/**/
+.logo
+{
+  position: absolute;
+  top:10px;
+  left:20px;
+}
+.bar-info {
+  position: absolute;
+  right: 30px;
+  width: 81%;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  background: #9C9B9B;
+  top: 20px;
+  transform: skewX(-20deg);
+  text-indent: 30px;
+
+  p {
+    transform: skewX(20deg);
+    span:nth-child(1){font-size: 12pt;}
+    span:nth-child(2) {
+      float: right;
+      margin: 2px 40px;
+      font-size: 26pt;
+      cursor: pointer;
+    }
+  }
+}
+
+.sub-nav
+{
+  margin-top: 140px;
+}
