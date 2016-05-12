@@ -7,40 +7,30 @@
     {
         $routeProvider
             .when('/',{
-                templateUrl:'html/presentacion.html',
-                controller: 'presentacionCtrl',
+                templateUrl:'html/presentation.html',
+                controller: 'PresentationController',
                 controllerAs: 'pCtrl'
             })
             .when('/home',{
-                templateUrl:'html/home.html',
-                controller: 'homeCtrl',
-                controllerAs: 'hCtrl'
-            })
-            .when('/nav',{
                 templateUrl:'html/navigation.html',
-                controller: 'navigationCtrl',
+                controller: 'NavigationController',
                 controllerAs: 'nCtrl'
             })
             .when('/home/a',{
                 templateUrl:'html/a.html',
-                controller:'aCtrl',
+                controller:'AController',
                 controllerAs:'aCtrl'
             })
-            .when('/home/b',{
-                templateUrl:'html/b.html',
-                controller:'bCtrl'
+            .when('/home/a1',{
+                templateUrl:'html/a1.html',
+                controller:'A1Controller',
+                controllerAs:'a1Ctrl'
             })
-            .when('/home/c',{
-                templateUrl:'html/c.html',
-                controller:'cCtrl'
+            .when('/home/a2',{
+                templateUrl:'html/a2.html'
             })
-            .when('/home/d',{
-                templateUrl:'html/d.html',
-                controller:'dCtrl'
-            })
-            .when('/home/e',{
-                templateUrl:'html/e.html',
-                controller:'eCtrl'
+            .when('/home/a3',{
+                templateUrl:'html/a3.html'
             })
             .otherwise({
                 redirectTo: '/'

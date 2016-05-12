@@ -1,96 +1,112 @@
 <style>
-    .video
+
+    .botonera
     {
-        background: url('img/menu1.png');
-        width: 301px;
-        height:278px;
-        overflow: hidden;
+        position: relative;
+        width: 500px;
+        height:370px;
+        margin: 60px auto;
     }
-    .sub-video
+    .boton
     {
         position: absolute;
-        background: url('img/menu1a.png');
-        background-repeat:no-repeat;
-        width: 100%;
-        height:100%;
-        top: 100%;
-        transition: top .3s linear;
-    }
-    .video:hover .sub-video
-    {
-        top:0;
+        width: 150px;
+        height: 165px;
+        overflow: hidden;
+        cursor: pointer;
+
     }
 
-    .concepto
+    #btnvideo
     {
-        background: url('img/menu2.png');
-        width: 301px;
-        height:278px;
-        overflow: hidden;
-    }
-    .sub-concepto
-    {
-        position: absolute;
-        background: url('img/menu2a.png');
-        background-repeat:no-repeat;
-        width: 100%;
-        height:100%;
-        top: 100%;
-        transition: top .3s linear;
-    }
-    .concepto:hover .sub-concepto
-    {
-        top:0;
+        background: url('img/item_video_gris.png');
+        background-size: 150px 165px;
+        bottom: 0px;
+        left: 0px;
     }
 
-    .practica
+    #btnpractica
     {
-        background: url('img/menu3.png');
-        width: 301px;
-        height:278px;
-        overflow: hidden;
+        background: url('img/item_practica_gris.png');
+        background-size: 150px 165px;
+        bottom: 0px;
+        right: 0px;
     }
-    .sub-practica
+
+    #btnconcepto
+    {
+        background: url('img/item_conceptos_gris.png');
+        background-size: 150px 165px;
+        top: 0px;
+        left: 166px;
+
+    }
+
+
+    .imgcolor
     {
         position: absolute;
-        background: url('img/menu3a.png');
-        background-repeat:no-repeat;
         width: 100%;
         height:100%;
-        top: 100%;
-        transition: top .3s linear;
+        opacity: 0;
+        transition:all .3s linear;
+        border:1px d
     }
-    .practica:hover .sub-practica
+    .boton:hover .imgcolor
     {
-        top:0;
+        opacity:1;
+    }
+    .linea1
+    {
+        width: 130px;
+        height: 0px;
+        border: 1px dashed #757575;
+        position: absolute;
+        bottom: 186px;
+        left: 89px;
+        transform: rotate(-40deg);
+    }
+    .linea2
+    {
+        width: 135px;
+        height: 0px;
+        border: 1px dashed #757575;
+        position: absolute;
+        bottom: 186px;
+        right: 103px;
+        transform: rotate(40deg);
+    }
+    .linea3
+    {
+        width: 232px;
+        height: 0px;
+        border: 1px dashed #757575;
+        position: absolute;
+        bottom: 95px;
+        left: 135px;
     }
 </style>
+
 <div class="jumbotron" style="height: 600px;">
     <img class="logo" src="img/logo2.png" alt="Logo Seguros Bolivar">
     <div class="bar-info">
         <p>Curso Gestión del Desempeño / <span>{{aCtrl.subtitulo}}</span> <span class="glyphicon glyphicon-question-sign"></span></p>
     </div>
-    <div class="row sub-nav">
-        <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-            <div class="item animated bounceInDown">
-                <div class="center-block video">
-                    <div class="sub-video"></div>
-                </div>
-            </div>
+    <div class="botonera">
+
+        <div id="btnconcepto" class="boton" ng-click="aCtrl.go('/home/a1')">
+            <img class="imgcolor" src="img/item_conceptos_color.png" alt="">
         </div>
-        <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-            <div class="item animated bounceInLeft">
-                <div class="center-block concepto">
-                    <div class="sub-concepto"></div>
-                </div>
-            </div>
+
+        <div id="btnvideo" class="boton"  ng-click="aCtrl.go('/home/a2')">
+            <img class="imgcolor" src="img/item_video_color.png">
         </div>
-        <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-            <div class="item animated bounceInRight">
-                <div class="center-block practica">
-                    <div class="sub-practica"></div>
-                </div>
-            </div>
+
+        <div id="btnpractica" class="boton" ng-click="aCtrl.go('/home/a3')">
+            <img class="imgcolor" src="img/item_practica_color.png" alt="">
         </div>
+        <div class="linea1"></div>
+        <div class="linea2"></div>
+        <div class="linea3"></div>
     </div>
 </div>

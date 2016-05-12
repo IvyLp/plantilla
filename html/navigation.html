@@ -1,79 +1,105 @@
 <style>
-    svg
+    nav
     {
-        position:relative;
-        width: 80%;
-        bottom: 20px;
+        position: relative;
+        width: 365px;
+        margin: 90px 0;
     }
 
-    .item{transition:all 3s;-webkit-transition:all 3s;}
-    .item:hover g
+    #logo
     {
-        opacity: .7;
+        position: absolute;
+        top: 109px;
+        left: 106px;
+        width: 150px;
+    }
+
+    #item1
+    {
+        position: absolute;
+        top: -45px;
+        right: 300px;
+    }
+    #item2
+    {
+        position: absolute;
+        top:-65px;
+        left:255px;
+    }
+    #item3
+    {
+        position: absolute;
+        top:170px;
+        left:340px;
+    }
+    #item4
+    {
+        position: absolute;
+        top:330px;
+        left:210px;
+    }
+    #item5
+    {
+        position: absolute;
+        top:245px;
+        right:335px;
+    }
+
+    .itemcircle
+    {
+        cursor: pointer;
+        transition:1s all;
+    }
+    .itemcircle:hover
+    {
+        opacity: 0.5;
     }
 
 </style>
 
-<div id="menu" class="jumbotron">
+<div id="menu" class="jumbotron" style="height: 600px;">
     <div class="bar-info">
         <p>Curso Gestión del Desempeño <span></span> <span class="glyphicon glyphicon-question-sign"></span></p>
     </div>
-    <svg class="center-block" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1224 792" enable-background="new 0 0 1224 792" xml:space="preserve">
-        <g class="item  animated zoomIn" ng-click="nCtrl.go('/home/a')">
-            <path fill="#903383" d="M373.309,306.578l118.44,95.91l113.657-281.317C496.627,128.85,404.93,201.939,373.309,306.578z"/>
-            <text transform="matrix(1 0 0 1 462.0801 274.8838)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="59.4032">1.</text>
-            <g opacity="0">
-                <polyline fill="none" stroke="#7E8E99" stroke-width="2" stroke-miterlimit="10" points="425.433,227.987 376.291,178.846 224.252,178.846   "/>
-                <polygon fill="#7E8E99" points="429.068,231.622 427.705,224.351 421.796,230.258   "/>
-                <text transform="matrix(1 0 0 1 178.7119 135.0068)" fill="#999999" font-family="'UniSansRegular'" font-size="20.0599">¿Qué es la gestión</text>
-                <text transform="matrix(1 0 0 1 182.7119 157.3203)" fill="#999999" font-family="'UniSansBold'" font-size="23.8701">de desempeño?</text>
+    <nav class="center-block">
+        <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="100%" height="100%" viewBox="0 0 547.603 543.894" enable-background="new 0 0 547.603 543.894"
+         xml:space="preserve">
+            <g>
+                <g>
+                    <g  class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item1')" ng-mouseleave="nCtrl.mouseleave('item1')" ng-click="nCtrl.go('/home/a')">
+                        <path fill="#70A730" d="M13.691,192.563l99.816,87.309L254.607,0.112C141.695,8.083,46.514,83.949,13.691,192.563z"/>
+                        <text transform="matrix(1 0 0 1 103.8354 159.6655)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="61.66">1.</text>
+                    </g>
+                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item2')" ng-mouseleave="nCtrl.mouseleave('item2')" ng-click="nCtrl.go('/home/b')">
+                        <path  fill="#75B5A7" d="M521.32,151.544C476.29,63.314,386.302,0.015,275.129,0.015c-1.724,0,1.717-0.033,0,0l-61.621,126.479
+                        l311.4,32.378C523.754,156.872,522.553,153.62,521.32,151.544z"/>
+                        <text transform="matrix(1 0 0 1 314.8564 96.9019)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="61.66">2.</text>
+                    </g>
+                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item3')" ng-mouseleave="nCtrl.mouseleave('item3')" ng-click="nCtrl.go('/home/c')">
+                        <path fill="#9FBE37" d="M461.144,471.553c55.087-51.449,86.459-123.401,86.459-199.049c0-36.626-1.995-64.64-16.095-96.64
+                        l-147-16.199L461.144,471.553z"/>
+                         <text transform="matrix(1 0 0 1 450.8652 292.8955)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="61.66">3.</text>
+                    </g>
+                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item4')" ng-mouseleave="nCtrl.mouseleave('item4')" ng-click="nCtrl.go('/home/d')">
+                        <path  fill="#B0164B" d="M134.473,508.54c40.803,23.165,86.916,35.354,134.229,35.354c63.53,0,125.062-22.233,173.813-62.711
+                        l-30.007-127.318l-278.83,152.293l2.303,1.46L134.473,508.54z"/>
+                        <text transform="matrix(1 0 0 1 275.4375 483.6396)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="61.66">4.</text>
+                    </g>
+                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item5')" ng-mouseleave="nCtrl.mouseleave('item5')" ng-click="nCtrl.go('/home/e')">
+                        <path fill="#D58123" d="M6.992,210.218C2.356,230.312,0,250.935,0,271.648c0,90.99,44.851,175.063,120.219,225.861l125.638-71.473
+                        L6.992,210.218z"/>
+                         <text transform="matrix(1 0 0 1 79.0532 387.5537)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="61.66">5.</text>
+                    </g>
+                </g>
             </g>
-        </g>
-        <g class="item animated zoomIn" ng-click="nCtrl.go('/home/b')">
-            <path fill="#75B5A7" d="M864.284,267c-43.382-85-135.856-143.063-242.961-143.063c-1.661,0-3.315,0.007-4.97,0.039L555.735,274h138.091h7.32h166.595C866.629,272,865.471,269,864.284,267z"/>
-            <text transform="matrix(1 0 0 1 665.377 214.418)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="59.4032">2.</text>
-            <g opacity="0">
-                <polyline fill="none" stroke="#7E8E99" stroke-width="2" stroke-miterlimit="10" points="807.615,226.168 834.76,198.612 1010.825,198.612   "/>
-                <polygon fill="#7E8E99" points="803.979,229.804 811.252,228.44 805.346,222.533   "/>
-                <text transform="matrix(1 0 0 1 871.2705 157.3203)" fill="#999999" font-family="'UniSansBold'" font-size="23.8701">¿Cúal es el rol del líder</text>
-                <text transform="matrix(1 0 0 1 870.2119 181.3604)" fill="#999999" font-family="'UniSansRegular'" font-size="20.0599">en la gestión de Desempeño?</text>
-            </g>
-        </g>
-        <g class="item animated zoomIn" ng-click="nCtrl.go('/home/c')">
-            <path fill="#9FBE37" d="M806.311,575.442c53.07-49.566,83.294-118.842,83.294-191.72c0-35.285-6.883-69.723-20.466-101.723H716.606L806.311,575.442z"/>
-            <text transform="matrix(1 0 0 1 796.4072 403.2373)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="59.4032">3.</text>
-            <g opacity="0">
-                <text transform="matrix(1 0 0 1 927.2256 443.7354)" fill="#999999" font-family="'UniSansBold'" font-size="23.8701">Componentes</text>
-                <text transform="matrix(1 0 0 1 940.5967 466.4492)" fill="#999999" font-family="'UniSansRegular'" font-size="20.0599">de la gestión </text>
-                <text transform="matrix(1 0 0 1 934.1279 487.377)" fill="#999999" font-family="'UniSansRegular'" font-size="20.0599">de desempeño</text>
-                <polyline  fill="none" stroke="#7E8E99" stroke-width="2" stroke-miterlimit="10" points="850.483,464.057 885.688,499.259 1017.338,499.259    "/>
-            </g>
-        </g>
-        <g class="item animated zoomIn" ng-click="nCtrl.go('/home/d')">
-            <path fill="#B0164B" d="M491.596,610.988c39.31,22.318,83.734,34.061,129.315,34.061c61.206,0,120.484-21.42,167.452-60.415 l-44.769-146.432L490.83,608.694l2.219,1.405L491.596,610.988z"/>
-            <text transform="matrix(1 0 0 1 627.4004 587.001)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="59.4032">4.</text>
-            <g opacity="0">
-                <polyline fill="none" stroke="#7E8E99" stroke-width="2" stroke-miterlimit="10" points="587.649,603.74 659.125,675.216 837.913,675.216   "/>
-                <polygon fill="#7E8E99" points="584.013,600.104 585.379,607.375 591.285,601.468   "/>
-                <text transform="matrix(1 0 0 1 774.3457 642.6875)" fill="#999999" font-family="'UniSansRegular'" font-size="20.0599">Herramientas</text>
-                <text transform="matrix(1 0 0 1 802.3809 666.3408)" fill="#999999" font-family="'UniSansBold'" font-size="23.8701">útiles</text>
-            </g>
-        </g>
-        <g class="item animated zoomIn" ng-click="nCtrl.go('/home/e')">
-            <path fill="#D58131" d="M368.781,323.587c-4.467,19.358-6.736,39.226-6.736,59.183c0,87.659,43.209,168.654,115.818,217.593l128.75-86.845L368.781,323.587z"/>
-            <text transform="matrix(1 0 0 1 438.2051 494.4307)" fill="#FFFFFF" font-family="'Nexa-Bold'" font-size="59.4032">5.</text>
-            <g opacity="0">
-                <polyline fill="none" stroke="#7E8E99" stroke-width="2" stroke-miterlimit="10" points="416.406,519.496 365.362,570.537 217.723,570.537   "/>
-                <polygon fill="#7E8E99" points="420.041,515.859 412.771,517.224 418.678,523.131   "/>
-                <text transform="matrix(1 0 0 1 153.4307 529.4502)" fill="#999999" font-family="'UniSansRegular'" font-size="20.0599">Cúales son las etapas</text>
-                <text transform="matrix(1 0 0 1 99.9521 553.8008)" fill="#999999" font-family="'UniSansBold'" font-size="23.8701">de la gestión de Desempeño</text>
-            </g>
-        </g>
+        </svg>
+        <img id="logo" src="img/logo-menu.png" alt="">
+        <img id="item1" class="animated zoomOut" src="img/menui1.png" alt="">
+        <img id="item2" class="animated zoomOut" src="img/menui2.png" alt="">
+        <img id="item3" class="animated zoomOut" src="img/menui3.png" alt="">
+        <img id="item4" class="animated zoomOut" src="img/menui4.png" alt="">
+        <img id="item5" class="animated zoomOut" src="img/menui5.png" alt="">
+    </nav>
 
-        <g>
-            <text transform="matrix(1 0 0 1 551.9502 373.377)" fill="#999999" font-family="'UniSansRegular'" font-size="39.4127">GESTIÓN</text>
-            <text transform="matrix(1 0 0 1 521.9473 403.7842)" fill="#999999" font-family="'UniSansBold'" font-size="27.8488">DEL DESEMPEÑO</text>
-        </g>
-
-    </svg>
 </div>

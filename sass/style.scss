@@ -3,6 +3,7 @@
   padding:0;
   margin:0;
 }
+
 body
 {
   background-color:#000;
@@ -136,8 +137,8 @@ body
 .logo
 {
   position: absolute;
-  top:10px;
-  left:20px;
+  top:5px;
+  left:10px;
 }
 .bar-info {
   position: absolute;
@@ -147,7 +148,7 @@ body
   color: #fff;
   line-height: 40px;
   background: #9C9B9B;
-  top: 20px;
+  top: 10px;
   transform: skewX(-20deg);
   text-indent: 30px;
 
@@ -167,3 +168,8 @@ body
 {
   margin-top: 140px;
 }
+
+/*Submenu*/
+
+
+

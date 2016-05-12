@@ -1,0 +1,57 @@
+<style>
+    .title-progress{color:#757575;font-size: 12pt; margin-bottom: 0 !important;}
+    .bar-progress
+    {
+        width: 80%;
+        height: 5px;
+        background: #757575;
+        margin:0 auto;
+    }
+    .active-title
+    {
+        color: #4BAA18;
+    }
+    .active-bar{
+        background: #4BAA18;
+    }
+    .sub-item
+    {
+        cursor: pointer;
+    }
+</style>
+<div class="jumbotron" style="height: 600px;">
+    <img class="logo" src="img/logo2.png" alt="Logo Seguros Bolivar">
+    <div class="bar-info">
+        <p>Curso Gestión del Desempeño / <span>{{aCtrl.subtitulo}}</span> <span class="glyphicon glyphicon-question-sign"></span></p>
+    </div>
+    <div ng-hide="slide">
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                <div class="sub-item animated zoomIn">
+                    <p class="text-center title-progress ">Conceptos</p>
+                    <div class="bar-progress "></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                <div class="sub-item  animated zoomIn">
+                    <p class="text-center title-progress">Video</p>
+                    <div class="bar-progress"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                <div class="sub-item animated zoomIn">
+                    <p class="text-center title-progress active-title">Manos a la obra</p>
+                    <div class="bar-progress active-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <video width="100%">
+
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
