@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Plantilla</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
@@ -15,15 +16,17 @@
         <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
         <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     </head>
-    <body ng-app="plantilla">
+    <body ng-app="plantilla" class="background1">
         <section id="section">
             <div class="section" ng-view></div>
         </section>
         <script src="js/app.js"></script>
         <script src="js/services/ScrollToService.js"></script>
+        <script src="js/services/ActivitiesService.js"></script>
         <script src="js/controllers/PresentationController.js"></script>
         <script src="js/controllers/NavigationController.js"></script>
         <script src="js/controllers/AController.js"></script>
         <script src="js/controllers/A1Controller.js"></script>
+        <script src="js/controllers/A3Controller.js"></script>
     </body>
 </html>

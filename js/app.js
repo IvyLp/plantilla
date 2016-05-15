@@ -30,7 +30,9 @@
                 templateUrl:'html/a2.html'
             })
             .when('/home/a3',{
-                templateUrl:'html/a3.html'
+                templateUrl:'html/a3.html',
+                controller:'A3Controller',
+                controllerAs:'a3Ctrl'
             })
             .otherwise({
                 redirectTo: '/'

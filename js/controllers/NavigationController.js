@@ -11,7 +11,7 @@
         }
         vm.mouseleave = function(item)
         {
-            angular.element(document.querySelector('#'+item)).removeClass('zoomIn').addClass('zoomOut');
+            angular.element(document.querySelector('#'+item)).removeClass('zoomIn');
         }
 
         vm.go = function(path)

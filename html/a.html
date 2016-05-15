@@ -1,4 +1,39 @@
 <style>
+    section
+    {
+        background-color: #70A730;
+    }
+
+    .logo
+    {
+        position: absolute;
+        top:5px;
+        left:10px;
+    }
+    .bar-info
+    {
+        position: absolute;
+        right: 30px;
+        width: 81%;
+        height: 40px;
+        color: #fff;
+        line-height: 40px;
+        background: #70A730;
+        top: 10px;
+        transform: skewX(-20deg);
+        text-indent: 30px;
+    }
+    .bar-info p {
+        transform: skewX(20deg);
+    }
+
+    .bar-info p span:nth-child(1){font-size: 12pt;}
+    .bar-info p span:nth-child(2) {
+        float: right;
+        margin: 2px 40px;
+        font-size: 26pt;
+        cursor: pointer;
+    }
 
     .botonera
     {
@@ -87,7 +122,7 @@
     }
 </style>
 
-<div class="jumbotron" style="height: 600px;">
+<div class="jumbotron animated slideInRight" style="height: 600px;">
     <img class="logo" src="img/logo2.png" alt="Logo Seguros Bolivar">
     <div class="bar-info">
         <p>Curso Gestión del Desempeño / <span>{{aCtrl.subtitulo}}</span> <span class="glyphicon glyphicon-question-sign"></span></p>
@@ -109,4 +144,6 @@
         <div class="linea2"></div>
         <div class="linea3"></div>
     </div>
+    <span class="glyphicon glyphicon-menu-left nav-infografia" style="position: absolute; left: 10px; font-size: 50pt;   line-height: 600px; cursor: pointer;" ng-click=""></span>
+    <span class="glyphicon glyphicon-menu-right nav-infografia" style="position: absolute; right: 10px; font-size: 50pt; line-height: 600px; cursor: pointer;"  ng-click=""></span>
 </div>
