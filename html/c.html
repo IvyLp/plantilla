@@ -120,6 +120,21 @@
         bottom: 95px;
         left: 135px;
     }
+    .nav-infografia
+    {
+        position: absolute;
+        font-size: 39pt;
+        color:#757575;
+        line-height: 600px;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: all 1s;
+    }
+    .nav-infografia:hover
+    {
+        opacity: 1;
+        color:#75B5A7;
+    }
 </style>
 
 <div class="jumbotron animated slideInRight" style="height: 600px;">
@@ -144,6 +159,6 @@
         <div class="linea2"></div>
         <div class="linea3"></div>
     </div>
-    <span class="glyphicon glyphicon-menu-left nav-infografia" style="position: absolute; left: 10px; font-size: 50pt; color:#757575;  line-height: 600px; cursor: pointer;" ng-click="cCtrl.go('/home/b')"></span>
-    <span class="glyphicon glyphicon-menu-right nav-infografia" style="position: absolute; right: 10px; font-size: 50pt; color:#757575; line-height: 600px; cursor: pointer;"  ng-click="cCtrl.go('/home/d')"></span>
+    <span class="glyphicon glyphicon-menu-left nav-infografia" style="left: 10px;" ng-click="cCtrl.go('/home/b')"></span>
+    <span class="glyphicon glyphicon-menu-right nav-infografia" style="right: 10px;"  ng-click="cCtrl.go('/home/d')"></span>
 </div>

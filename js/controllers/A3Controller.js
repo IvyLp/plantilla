@@ -9,14 +9,13 @@
         var vm = this;
         vm.title = Activities.activitie1().title;
         vm.items = Activities.activitie1().items;
+        vm.mensaje = "";
         vm.validar = function(key){
-
-            console.log(Activities.activitie1().answer +" "+key);
+            vm.acierto = !vm.acierto;
             if(Activities.activitie1().answer == parseInt(key))
-                vm.acierto = !vm.acierto;
+                vm.mensaje = 'Respuesta Correcta, "Felicitaciones"';
             else
-                alert("Respuesta Incorrecta")
-
+                vm.mensaje = 'Respuesta Incorrecta, "Intenta Otra Véz"';
         };
 
         /*
