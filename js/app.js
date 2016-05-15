@@ -34,6 +34,26 @@
                 controller:'A3Controller',
                 controllerAs:'a3Ctrl'
             })
+            .when('/home/b',{
+                templateUrl:'html/b.html',
+                controller:'BController',
+                controllerAs: 'bCtrl'
+            })
+            .when('/home/b1',{
+                templateUrl:'html/b1.html',
+                controller:'B1Controller',
+                controllerAs: 'b1Ctrl'
+            })
+            .when('/home/c',{
+                templateUrl:'html/c.html',
+                controller:'CController',
+                controllerAs: 'cCtrl'
+            })
+            .when('/home/c1',{
+                templateUrl:'html/c1.html',
+                controller:'C1Controller',
+                controllerAs: 'c1Ctrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });

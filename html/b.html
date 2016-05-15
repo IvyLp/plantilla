@@ -1,7 +1,7 @@
 <style>
     section
     {
-        background-color: #70A730;
+        background-color: #75B5A7;
     }
 
     .logo
@@ -18,7 +18,7 @@
         height: 40px;
         color: #fff;
         line-height: 40px;
-        background: #70A730;
+        background: #75B5A7;
         top: 10px;
         transform: skewX(-20deg);
         text-indent: 30px;
@@ -125,25 +125,25 @@
 <div class="jumbotron animated slideInRight" style="height: 600px;">
     <img class="logo" src="img/logo2.png" alt="Logo Seguros Bolivar">
     <div class="bar-info">
-        <p>Curso Gestión del Desempeño / <span>{{aCtrl.subtitulo}}</span> <span class="glyphicon glyphicon-question-sign"></span></p>
+        <p>Curso Gestión del Desempeño / <span>{{bCtrl.subtitulo}}</span> <span class="glyphicon glyphicon-question-sign"></span></p>
     </div>
     <div class="botonera">
 
-        <div id="btnconcepto" class="boton" ng-click="aCtrl.go('/home/a1')">
+        <div id="btnconcepto" class="boton" ng-click="bCtrl.go('/home/b1')">
             <img class="imgcolor" src="img/item_conceptos_color.png" alt="">
         </div>
 
-        <div id="btnvideo" class="boton"  ng-click="aCtrl.go('/home/a2')">
+        <div id="btnvideo" class="boton"  ng-click="bCtrl.go('/home/b2')">
             <img class="imgcolor" src="img/item_video_color.png">
         </div>
 
-        <div id="btnpractica" class="boton" ng-click="aCtrl.go('/home/a3')">
+        <div id="btnpractica" class="boton" ng-click="bCtrl.go('/home/b3')">
             <img class="imgcolor" src="img/item_practica_color.png" alt="">
         </div>
         <div class="linea1"></div>
         <div class="linea2"></div>
         <div class="linea3"></div>
     </div>
-    <span class="glyphicon glyphicon-menu-left nav-infografia" style="position: absolute; left: 10px; font-size: 50pt; color:#757575;  line-height: 600px; cursor: pointer;" ng-click="aCtrl.go('/home')"></span>
-    <span class="glyphicon glyphicon-menu-right nav-infografia" style="position: absolute; right: 10px; font-size: 50pt; color:#757575; line-height: 600px; cursor: pointer;"  ng-click="aCtrl.go('/home/b')"></span>
+    <span class="glyphicon glyphicon-menu-left nav-infografia" style="position: absolute; left: 10px; font-size: 50pt; color:#757575;  line-height: 600px; cursor: pointer;" ng-click="bCtrl.go('/home/a')"></span>
+    <span class="glyphicon glyphicon-menu-right nav-infografia" style="position: absolute; right: 10px; font-size: 50pt; color:#757575; line-height: 600px; cursor: pointer;"  ng-click="bCtrl.go('/home/c')"></span>
 </div>
