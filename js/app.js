@@ -54,6 +54,16 @@
                 controller:'C1Controller',
                 controllerAs: 'c1Ctrl'
             })
+            .when('/home/d',{
+                templateUrl:'html/d.html',
+                controller:'DController',
+                controllerAs: 'dCtrl'
+            })
+            .when('/home/d1',{
+                templateUrl:'html/d1.html',
+                controller:'D1Controller',
+                controllerAs: 'd1Ctrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
