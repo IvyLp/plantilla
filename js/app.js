@@ -44,6 +44,14 @@
                 controller:'B1Controller',
                 controllerAs: 'b1Ctrl'
             })
+            .when('/home/b2',{
+                templateUrl:'html/b2.html'
+            })
+            .when('/home/b3',{
+                templateUrl:'html/b3.html',
+                controller:'B3Controller',
+                controllerAs: 'b3Ctrl'
+            })
             .when('/home/c',{
                 templateUrl:'html/c.html',
                 controller:'CController',
@@ -54,6 +62,15 @@
                 controller:'C1Controller',
                 controllerAs: 'c1Ctrl'
             })
+            .when('/home/c2',{
+                templateUrl:'html/c2.html'
+            })
+            .when('/home/c3',{
+                templateUrl:'html/c3.html',
+                controller:'C3Controller',
+                controllerAs: 'c3Ctrl'
+            })
+            /*
             .when('/home/d',{
                 templateUrl:'html/d.html',
                 controller:'DController',
@@ -64,6 +81,17 @@
                 controller:'D1Controller',
                 controllerAs: 'd1Ctrl'
             })
+            .when('/home/e',{
+                templateUrl:'html/e.html',
+                controller:'EController',
+                controllerAs: 'eCtrl'
+            })
+            .when('/home/e1',{
+                templateUrl:'html/E1.html',
+                controller:'E1Controller',
+                controllerAs: 'E1Ctrl'
+            })
+            */
             .otherwise({
                 redirectTo: '/'
             });

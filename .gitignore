@@ -9,17 +9,7 @@ node_modules
 composer.phar
 vendor
 
-
-# Laravel 
-######################
-bootstrap/compiled.php
-.env.*.php
-.env.php
-.env
-public/uploads
-public/files_policies
-.idea
-
+video
 
 # Compiled JS and CSS files (should be generated though gulp)
 ######################

@@ -60,29 +60,29 @@
     }
 </style>
 <div class="animated zoomIn" style="height: 600px;">
-    <a href="#/home/a" class="cerrar">X</a>
+    <a href="#/home/c" class="cerrar">X</a>
     <div id="actividad">
         <div class="pag">
-            <div ng-hide="a3Ctrl.acierto">
+            <div ng-hide="c3Ctrl.acierto">
                 <div class="col-md-12">
                     <video width="420" height="340" controls>
-                        <source src="video/PT1.v1.mp4" type="video/mp4">
-                        <source src="video/PT1.v1.ogg" type="video/ogg">
+                        <source src="video/PT3.v1.mp4" type="video/mp4">
+                        <source src="video/PT3.v1.ogg" type="video/ogg">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="col-md-12">
                     <div style="width: 80%;position: relative;margin: 35px auto;">
-                        <h4>{{a3Ctrl.title}}</h4>
+                        <h4>{{c3Ctrl.title}}</h4>
                         <br>
                         <ul>
-                            <li ng-repeat="i in a3Ctrl.items" ng-click="a3Ctrl.validar($index)">{{i}}</li>
+                            <li ng-repeat="i in c3Ctrl.items" ng-click="c3Ctrl.validar($index)">{{i}}</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div ng-show="a3Ctrl.acierto">
-                <h1 style="text-align: center;line-height: 500px;">{{a3Ctrl.mensaje}}</h1>
+            <div ng-show="c3Ctrl.acierto">
+                <h1 style="text-align: center;line-height: 500px;">{{c3Ctrl.mensaje}}</h1>
             </div>
         </div>
     </div>

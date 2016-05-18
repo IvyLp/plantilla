@@ -4,10 +4,24 @@
            this.activitie1 = function(){
                 return {
                     title: "¿Según tu percepción que crees que hizo mal la jefe?",
-                    items: ["a. No lo mira a los ojos (correcto)","b. Se expresó en un tono de voz inadecuado (incorrecto)","c. No contextualizó a Horacio con respecto a qué y para qué es la Evaluación de Desempeño (correcto)"],
+                    items: ["a. No lo mira a los ojos","b. Se expresó en un tono de voz inadecuado","c. No contextualizó a Horacio con respecto a qué y para qué es la Evaluación de Desempeño"],
                     answer: 2
                 }
            };
+            this.activitie2 = function(){
+                return {
+                    title: "Según tu percepción ¿qué crees que hizo mal la jefe?",
+                    items: ["a. El líder no evidenció que la Evaluación de Desempeño es una oportunidad de desarrollo","b. No propició que Horacio se sintiera tranquilo","c. No dio lugar al reconocimiento de aspectos positivos.","d. No generó una atmósfera de confianza"],
+                    answer: 0
+                }
+            };
+            this.activitie3 = function(){
+                return {
+                    title: "¿Qué hizo bien el jefe?",
+                    items: ["a. Evidencio los comportamientos la situación y el impacto","b. Se enfocó en un comportamiento insignificante"],
+                    answer: 0
+                }
+            };
 
            this.activitie4 = function (){
                return {
