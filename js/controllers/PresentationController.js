@@ -5,6 +5,7 @@
     function PresentationCtrl($location,$timeout)
     {
         /* jshint validthis: true */
+
         var vm = this;
         var intro1 = angular.element(document.querySelector('#intro1')),
             intro2 = angular.element(document.querySelector('#intro2'));
@@ -17,12 +18,5 @@
                 intro2.removeClass('zoomOut').addClass('zoomIn');
             },1000);
         },3000);
-
-
-        vm.go = function(path)
-        {
-            $location.path(path);
-        }
-
     }
 })();

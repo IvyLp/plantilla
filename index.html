@@ -7,19 +7,48 @@
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
+
+        <link href="http://vjs.zencdn.net/5.10.2/video-js.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
         <!--[if lt IE 9]>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
         <![endif]-->
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
+        <!--<script src="bower_components/angular/angular.js"></script>-->
+        <script src="js/angular1.2.9.js"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+        <!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
+        <script src="js/angular-animate1.2.9.js"></script>
+        <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+        <script src="js/angular-route1.2.9.js"></script>
         <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
         <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- Video -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+        <!-- If you'd like to support IE8 -->
+        <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
     </head>
     <body ng-app="plantilla" class="background1">
-        <section id="section">
+        <section id="section" ng-class="clase">
             <div class="section" ng-view></div>
         </section>
+
+
+        <script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
+
+
         <script src="js/app.js"></script>
         <script src="js/services/ScrollToService.js"></script>
         <script src="js/services/ActivitiesService.js"></script>
@@ -36,7 +65,9 @@
         <script src="js/controllers/C3Controller.js"></script>
         <script src="js/controllers/DController.js"></script>
         <script src="js/controllers/D1Controller.js"></script>
+        <script src="js/controllers/D3Controller.js"></script>
         <script src="js/controllers/EController.js"></script>
         <script src="js/controllers/E1Controller.js"></script>
+        <script src="js/controllers/E3Controller.js"></script>
     </body>
 </html>

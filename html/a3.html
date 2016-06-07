@@ -1,82 +1,23 @@
-<style>
-    section
-    {
-        background-color: rgba(0,0,0,.7);
-    }
-
-    #actividad
-    {
-        position: relative;
-        width: 900px;
-        height: 600px;
-        margin: 0 auto;
-        overflow: hidden;
-        font-family: 'Lato', sans-serif;
-        color:#686868;
-    }
-    .pag
-    {
-        width: 100%;
-        height:100%;
-        background: #fff;
-    }
-
-    .cerrar
-    {
-        position: fixed;
-        color: #fff;
-        font-size: 28pt;
-        width: 43px;
-        height: 43px;
-        line-height: 40px;
-        text-align: center;
-        right: 76px;
-        top: -40px;
-        cursor: pointer;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -ms-transition: all .5s;
-        -o-transition: all .5s;
-        transition: all .5s;
-    }
-    .cerrar:hover
-    {
-        color:#ff0000;
-    }
-    ul
-    {
-        list-style: none;
-    }
-    ul li
-    {
-        cursor: pointer;
-        transition:all 1s;
-    }
-    video
-    {
-        position: relative;
-        top:10px;
-        left: 215px;
-    }
-</style>
 <div class="animated zoomIn" style="height: 600px;">
-    <a href="#/home/a" class="cerrar">X</a>
     <div id="actividad">
+        <a href="#/home/a" class="cerrar">X</a>
         <div class="pag">
             <div ng-hide="a3Ctrl.acierto">
                 <div class="col-md-12">
-                    <video width="420" height="340" controls>
-                        <source src="video/PT1.v1.mp4" type="video/mp4">
-                        <source src="video/PT1.v1.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
+                    <br/> <br/>
+                    <video id="player1" src="video/PT1.v1.mp4" width="520">
+                        <source src="video/video1.mp4" type="video/mp4">
+                        <source src="video/video1.ogg" type="video/ogg">
+                        <source src="video/video1.webm" type="video/webm">
                     </video>
                 </div>
                 <div class="col-md-12">
+                    <br/> <br/>
                     <div style="width: 80%;position: relative;margin: 35px auto;">
                         <h4>{{a3Ctrl.title}}</h4>
                         <br>
                         <ul>
-                            <li ng-repeat="i in a3Ctrl.items" ng-click="a3Ctrl.validar($index)">{{i}}</li>
+                            <li ng-repeat="i in a3Ctrl.items" ng-click="a3Ctrl.validar($index)"><input type="radio" name="{{a3Ctrl.options[$parent.$index]}}" ng-click="a3Ctrl.cambiavalor($parent.$index,$index)"/> {{i}}</li>
                         </ul>
                     </div>
                 </div>

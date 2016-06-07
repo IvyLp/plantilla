@@ -23,8 +23,9 @@
                 }
             };
 
-           this.activitie4 = function (){
+            this.activitie4 = function (){
                return {
+                   title: "Relacione el concepto y la definición correspondiente, colocando la letra correspondiente.",
                    concept:[ 'A. La importancia de desplegar los objetivos estratégicos es que',
                              'B. La Evaluación de Comportamientos permitirá a los funcionarios y líderes',
                              'C. La Elaboración del Plan de Trabajo Individual consiste en',
@@ -40,7 +41,14 @@
                    ],
                    answer:[2,3,4,0,1]
                }
-           }
+            };
 
+            this.activitie5 = function (){
+                return{
+                    title: "Complete las siguientes frases arrastrando las palabras adecuadas.",
+                    answer:['1','4','2','3']
+
+                }
+            };
         });
 })();

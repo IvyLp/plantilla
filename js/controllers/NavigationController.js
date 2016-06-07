@@ -5,6 +5,7 @@
     function NavigationCtrl($location)
     {
         var vm  = this;
+        vm.instruction = 'html/instruction.html';
         vm.mouseenter = function(item)
         {
             angular.element(document.querySelector('#'+item)).removeClass('zoomOut').addClass('zoomIn');

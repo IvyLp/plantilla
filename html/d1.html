@@ -1,93 +1,37 @@
-<style>
-    section
-    {
-        background-color: rgba(0,0,0,.7);
-    }
-
-    #infografia
-    {
-        position: relative;
-        width: 900px;
-        height: 600px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    .pag
-    {
-        width: 100%;
-        height:100%;
-        background: #fff;
-    }
-
-    .cerrar
-    {
-        position: fixed;
-        color: #fff;
-        font-size: 28pt;
-        width: 43px;
-        height: 43px;
-        line-height: 40px;
-        text-align: center;
-        right: 76px;
-        top: -40px;
-        cursor: pointer;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -ms-transition: all .5s;
-        -o-transition: all .5s;
-        transition: all .5s;
-    }
-    .cerrar:hover
-    {
-        color:#ff0000;
-    }
-
-    .nav-infografia
-    {
-        font-size: 25pt;
-        float: right;
-        margin:0 10px;
-        cursor: pointer;
-        transition: all .5s;
-        z-index: 3000;
-    }
-    .nav-infografia:hover{
-        color: #4BAA18;
-    }
-</style>
-
 <div class="animated zoomIn" style="height: 600px;">
-    <a href="#/home/b" class="cerrar">X</a>
     <div id="infografia">
+        <a href="#/home/d" class="cerrar">X</a>
         <div id="pag1" class="pag">
-
-            <img class="animated" ng-class="{flipInX :d1Ctrl.estado1}" src="img/infografia4/d1.png" style="position: absolute;width: 430px;top:40px;left: 170px; animation-delay: 1s;">
+            <img ng-if="d1Ctrl.estado1" src="img/infografia4/4a.gif" width="100%" alt="">
+           <!-- <img class="animated" ng-class="{flipInX :d1Ctrl.estado1}" src="img/infografia4/e1.png" style="position: absolute;width: 430px;top:40px;left: 170px; animation-delay: 1s;">
             <img class="animated" ng-class="{zoomIn :d1Ctrl.estado1}" src="img/infografia4/e2.png" style="position: absolute;width: 170px;top: 65px;left: 95px; animation-delay: 1.5s;">
             <img class="animated" ng-class="{zoomIn :d1Ctrl.estado1}" src="img/infografia4/e3.png" style="position: absolute; width: 270px; top: 150px; left: 585px; animation-delay: 2s;">
-            <img class="animated" ng-class="{fadeInLeft :d1Ctrl.estado1}" src="img/infografia4/e4.png" style="position: absolute;width: 460px;top: 180px;left: 100px; animation-delay: 2.5s;">
+            <img class="animated" ng-class="{fadeInLeft :d1Ctrl.estado1}" src="img/infografia4/e4.png" style="position: absolute;width: 460px;top: 180px;left: 100px; animation-delay: 2.5s;">-->
             <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="d1Ctrl.saltaSlide([0,600,2])"></span>
         </div>
         <div id="pag2" class="pag">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e5.png" style="position: absolute;width: 550px; top: 620px; left: 76px; animation-delay: 3s;">
+            <img ng-if="d1Ctrl.estado2" src="img/infografia4/4b.gif" width="100%" alt="">
+            <!--<img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e5.png" style="position: absolute;width: 550px; top: 620px; left: 76px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e6.png" style="position: absolute;width: 580px; top: 710px; left: 160px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e7.png" style="position: absolute;width: 159px; top: 650px; left: 683px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e8.png" style="position: absolute;width: 155px; top: 801px; left: 143px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e9.png" style="position: absolute;width: 107px; top: 780px; left: 288px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d10.png" style="position: absolute;width: 130px; top: 820px; left: 376px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d11.png" style="position: absolute;width: 90px; top: 810px; left: 510px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d12.png" style="position: absolute;width: 100px; top: 837px; left: 593px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d13.png" style="position: absolute;width: 263px; top: 900px; left: 32px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d14.png" style="position: absolute;width: 400px; top: 996px; left: 305px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d15.png" style="position: absolute;width: 140px; top: 1050px; left: 690px; animation-delay: 3s;z-index: 1;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e10.png" style="position: absolute;width: 130px; top: 820px; left: 376px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e11.png" style="position: absolute;width: 90px; top: 810px; left: 510px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e12.png" style="position: absolute;width: 100px; top: 837px; left: 593px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e13.png" style="position: absolute;width: 263px; top: 900px; left: 32px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e14.png" style="position: absolute;width: 400px; top: 996px; left: 305px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e15.png" style="position: absolute;width: 140px; top: 1050px; left: 690px; animation-delay: 3s;z-index: 1;">-->
             <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="d1Ctrl.saltaSlide([600,0,1])"></span>
             <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="d1Ctrl.saltaSlide([600,1200,3])"></span>
 
         </div>
         <div id="pag3" class="pag">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d17.png" style="position: absolute;width: 685px; top: 1234px; left: 105px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d16.png" style="position: absolute;width: 490px; top: 1205px; left: 180px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d18.png" style="position: absolute;width: 295px; top: 1303px; left: 295px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/d19.png" style="position: absolute;width: 80px; top: 1315px; left: 180px; animation-delay: 3s;">
+            <img ng-if="d1Ctrl.estado3" src="img/infografia4/4c.gif" width="100%" alt="">
+            <!--<img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e17.png" style="position: absolute;width: 685px; top: 1234px; left: 105px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e16.png" style="position: absolute;width: 490px; top: 1205px; left: 180px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e18.png" style="position: absolute;width: 295px; top: 1303px; left: 295px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e19.png" style="position: absolute;width: 80px; top: 1315px; left: 180px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e20.png" style="position: absolute;width: 75px; top: 1390px; left: 240px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e21.png" style="position: absolute;width: 45px; top: 1396px; left: 382px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e22.png" style="position: absolute;width: 45px; top: 1393px; left: 543px; animation-delay: 3s;">
@@ -97,33 +41,45 @@
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e26.png" style="position: absolute;width: 130px; top: 1563px; left: 685px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e27.png" style="position: absolute;width: 330px; top: 1640px; left: 420px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e28.png" style="position: absolute;width: 282px; top: 1655px; left: 80px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e29.png" style="position: absolute;width: 2px; top: 1710px; left: 204px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e29.png" style="position: absolute;width: 2px; top: 1710px; left: 204px; animation-delay: 3s;">-->
 
 
             <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="d1Ctrl.saltaSlide([1200,600,2])"></span>
             <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="d1Ctrl.saltaSlide([1200,1800,4])"></span>
         </div>
         <div id="pag4" class="pag">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e30.png" style="position: absolute;width: 150px; top: 1820px; left: 130px; animation-delay: 3s;">
+            <img ng-if="d1Ctrl.estado4" src="img/infografia4/4d.gif" width="100%" alt="">
+            <!--<img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e30.png" style="position: absolute;width: 150px; top: 1820px; left: 130px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e31.png" style="position: absolute;width: 140px; top: 1886px; left: 64px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e32.png" style="position: absolute;width: 140px; top: 1883px; left: 246px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e33.png" style="position: absolute;width: 535px; top: 1840px; left: 290px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e34.png" style="position: absolute;width: 361px; top: 2069px; left: 387px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e35.png" style="position: absolute;width: 418px; top: 2270px; left: 360px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e35.png" style="position: absolute;width: 418px; top: 2270px; left: 360px; animation-delay: 3s;">-->
             <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="d1Ctrl.saltaSlide([1800,1200,3])"></span>
             <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="d1Ctrl.saltaSlide([1800,2400,5])"></span>
         </div>
         <div id="pag5" class="pag">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e36.png" style="position: absolute;width: 764px; top: 2290px; left: 60px; animation-delay: 3s;">
+            <img ng-if="d1Ctrl.estado5" src="img/infografia4/4e.gif" width="100%" alt="">
+            <!--<img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e36.png" style="position: absolute;width: 764px; top: 2290px; left: 60px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e37.png" style="position: absolute;width: 563px; top: 2410px; left: 130px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e38.png" style="position: absolute;width: 446px; top: 2645px; left: 97px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e39.png" style="position: absolute;width: 223px; top: 2640px; left: 615px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e40.png" style="position: absolute;width: 295px; top: 2740px; left: 275px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e41.png" style="position: absolute;width: 380px; top: 2880px; left: 100px; animation-delay: 3s;">
             <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e42.png" style="position: absolute;width: 377px; top: 2914px; left: 100px; animation-delay: 3s;">
-            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e43.png" style="position: absolute;width: 446px; top: 2943px; left: 100px; animation-delay: 3s;">
+            <img class="animated" ng-class="{fadeInLeft  :d1Ctrl.estado1}" src="img/infografia4/e43.png" style="position: absolute;width: 446px; top: 2943px; left: 100px; animation-delay: 3s;">-->
 
             <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="d1Ctrl.saltaSlide([2400,1800,4])"></span>
+            <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="d1Ctrl.saltaSlide([2400,3000,6])"></span>
+        </div>
+        <div id="pag6" class="pag">
+            <img ng-if="d1Ctrl.estado6" src="img/infografia4/4f.gif" width="100%" alt="">
+            <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="d1Ctrl.saltaSlide([3000,2400,5])"></span>
+            <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="d1Ctrl.saltaSlide([3000,3600,7])"></span>
+        </div>
+        <div id="pag6" class="pag">
+            <img ng-if="d1Ctrl.estado7" src="img/infografia4/4g.gif" width="100%" alt="">
+            <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="d1Ctrl.saltaSlide([3600,3000,6])"></span>
         </div>
     </div>
 </div>

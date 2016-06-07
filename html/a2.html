@@ -1,60 +1,14 @@
-<style>
-    section
-    {
-        background-color: rgba(0,0,0,.7);
-    }
-
-    #video
-    {
-        position: relative;
-        width: 900px;
-        height: 600px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    video
-    {
-        position: fixed;
-    }
-    .pag
-    {
-        width: 100%;
-        height:100%;
-        background: #fff;
-    }
-
-    .cerrar
-    {
-        position: fixed;
-        color: #fff;
-        font-size: 28pt;
-        width: 43px;
-        height: 43px;
-        line-height: 40px;
-        text-align: center;
-        right: 76px;
-        top: -40px;
-        cursor: pointer;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -ms-transition: all .5s;
-        -o-transition: all .5s;
-        transition: all .5s;
-    }
-    .cerrar:hover
-    {
-        color:#ff0000;
-    }
-
-</style>
-
 <div class="animated zoomIn" style="height: 600px;">
     <a href="#/home/a" class="cerrar">X</a>
     <div id="video">
-        <video controls width="900" height="600">
-            <source src="video/PT1.v1.mp4" type="video/mp4">
-            <source src="video/PT1.v1.ogg" type="video/ogg">
-            Your browser does not support the video tag.
+        <video controls width="900" class="center-block video-js vjs-default-skin"  preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup='{"example_option":true}'>
+            <source src="video/video1.mp4" type="video/mp4">
+            <source src="video/video1.ogg" type="video/ogg">
+            <source src="video/video1.webm" type="video/webm">
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
         </video>
     </div>
 </div>

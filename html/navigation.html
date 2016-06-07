@@ -1,120 +1,47 @@
-<style>
-    nav
-    {
-        position: relative;
-        width: 365px;
-        margin: 90px 0;
-    }
 
-    .bar-info
-    {
-        position: absolute;
-        right: 30px;
-        width: 81%;
-        height: 40px;
-        color: #fff;
-        line-height: 40px;
-        background: #70A730;
-        top: 10px;
-        transform: skewX(-20deg);
-        text-indent: 30px;
-    }
-    .bar-info p {
-        transform: skewX(20deg);
-    }
-
-    .bar-info p span:nth-child(1){font-size: 12pt;}
-    .bar-info p span:nth-child(2) {
-        float: right;
-        margin: 2px 40px;
-        font-size: 26pt;
-        cursor: pointer;
-    }
-
-    #logo
-    {
-        position: absolute;
-        top: 109px;
-        left: 106px;
-        width: 150px;
-    }
-
-    #item1
-    {
-        position: absolute;
-        top: -45px;
-        right: 300px;
-    }
-    #item2
-    {
-        position: absolute;
-        top:-65px;
-        left:255px;
-    }
-    #item3
-    {
-        position: absolute;
-        top:170px;
-        left:340px;
-    }
-    #item4
-    {
-        position: absolute;
-        top:330px;
-        left:210px;
-    }
-    #item5
-    {
-        position: absolute;
-        top:245px;
-        right:335px;
-    }
-
-    .itemcircle
-    {
-        cursor: pointer;
-        transition:1s all;
-    }
-    .itemcircle:hover
-    {
-        opacity: 0.5;
-    }
-    .opacity{
-        opacity:0.7;
-    }
-
-</style>
 
 <div id="menu" class="jumbotron animated slideInRight" style="height: 600px;">
-    <div class="bar-info" style="font-family: 'Lato', sans-serif !important;">
-        <p>Curso Gestión del Desempeño <span></span> <span class="glyphicon glyphicon-question-sign"></span></p>
+    <div class="bar-info bar-bg" style="font-family: 'Lato', sans-serif !important; ">
+        <p>Curso Gestión del Desempeño <span></span> <img src="img/btn-info.png" ng-click="vm.open = 1" style="position: absolute;right: 30px;cursor: pointer;"></p>
     </div>
     <nav class="center-block">
+        <img src="img/btn1.png" class="item-menu" style="position: absolute;width: 155px;left: -4px;" alt="" ng-click="vm.go('/home/a')">
+        <img src="img/btn2.png" class="item-menu" style="position: absolute;width: 220px; left: 120px;top:-2px;" alt="" ng-click="vm.go('/home/b')">
+        <img src="img/btn3.png" class="item-menu" style="position: absolute;width: 107px; top:111px; left: 250px;" alt="" ng-click="vm.go('/home/c')">
+        <img src="img/btn4.png" class="item-menu" style="position: absolute;width: 212px; top:236px; left: 75px;" alt="" ng-click="vm.go('/home/d')">
+        <img src="img/btn5.png" class="item-menu" style="position: absolute;width: 164px; top:138px; left: -13px;" alt="" ng-click="vm.go('/home/e')">
+        <img src="img/logo-menu.png" style="position: absolute; top: 109px; left: 106px; width: 150px;" alt="">
+        <img src="img/menui1.png" class="animated opacity" style="position: absolute; top: -45px; right: 300px;" alt="">
+        <img src="img/menui2.png" class="animated opacity" style="position: absolute; top:-65px; left:255px;" alt="">
+        <img src="img/menui3.png" class="animated opacity" style="position: absolute; top:170px; left:340px;" alt="">
+        <img src="img/menui4.png" class="animated opacity" style="position: absolute; top:330px; left:210px;" alt="">
+        <img src="img/menui5.png" class="animated opacity" style="position: absolute; top:245px; right:335px;" alt="">
+        <!--
         <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="365px" height="365px" viewBox="0 0 547.603 543.894" enable-background="new 0 0 547.603 543.894"
          xml:space="preserve">
             <g>
                 <g>
-                    <g  class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item1')" ng-mouseleave="nCtrl.mouseleave('item1')" ng-click="nCtrl.go('/home/a')">
+                    <g  class="itemcircle" ng-mouseenter="vm.mouseenter('item1')" ng-mouseleave="vm.mouseleave('item1')" ng-click="vm.go('/home/a')">
                         <path fill="#70A730" d="M13.691,192.563l99.816,87.309L254.607,0.112C141.695,8.083,46.514,83.949,13.691,192.563z"/>
                         <text transform="matrix(1 0 0 1 103.8354 159.6655)" fill="#FFFFFF" font-family="'Lato'" font-size="61.66">1.</text>
                     </g>
-                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item2')" ng-mouseleave="nCtrl.mouseleave('item2')" ng-click="nCtrl.go('/home/b')">
+                    <g class="itemcircle" ng-mouseenter="vm.mouseenter('item2')" ng-mouseleave="vm.mouseleave('item2')" ng-click="vm.go('/home/b')">
                         <path  fill="#75B5A7" d="M521.32,151.544C476.29,63.314,386.302,0.015,275.129,0.015c-1.724,0,1.717-0.033,0,0l-61.621,126.479
                         l311.4,32.378C523.754,156.872,522.553,153.62,521.32,151.544z"/>
                         <text transform="matrix(1 0 0 1 314.8564 96.9019)" fill="#FFFFFF" font-family="'Lato'" font-size="61.66">2.</text>
                     </g>
-                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item3')" ng-mouseleave="nCtrl.mouseleave('item3')" ng-click="nCtrl.go('/home/c')">
+                    <g class="itemcircle" ng-mouseenter="vm.mouseenter('item3')" ng-mouseleave="vm.mouseleave('item3')" ng-click="vm.go('/home/c')">
                         <path fill="#9FBE37" d="M461.144,471.553c55.087-51.449,86.459-123.401,86.459-199.049c0-36.626-1.995-64.64-16.095-96.64
                         l-147-16.199L461.144,471.553z"/>
                          <text transform="matrix(1 0 0 1 450.8652 292.8955)" fill="#FFFFFF" font-family="'Lato'" font-size="61.66">3.</text>
                     </g>
-                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item4')" ng-mouseleave="nCtrl.mouseleave('item4')" ng-click="nCtrl.go('/home/d')">
+                    <g class="itemcircle" ng-mouseenter="vm.mouseenter('item4')" ng-mouseleave="vm.mouseleave('item4')" ng-click="vm.go('/home/d')">
                         <path  fill="#B0164B" d="M134.473,508.54c40.803,23.165,86.916,35.354,134.229,35.354c63.53,0,125.062-22.233,173.813-62.711
                         l-30.007-127.318l-278.83,152.293l2.303,1.46L134.473,508.54z"/>
                         <text transform="matrix(1 0 0 1 275.4375 483.6396)" fill="#FFFFFF" font-family="'Lato'" font-size="61.66">4.</text>
                     </g>
-                    <g class="itemcircle" ng-mouseenter="nCtrl.mouseenter('item5')" ng-mouseleave="nCtrl.mouseleave('item5')" ng-click="nCtrl.go('/home/e')">
+                    <g class="itemcircle" ng-mouseenter="vm.mouseenter('item5')" ng-mouseleave="vm.mouseleave('item5')" ng-click="vm.go('/home/e')">
                         <path fill="#D58123" d="M6.992,210.218C2.356,230.312,0,250.935,0,271.648c0,90.99,44.851,175.063,120.219,225.861l125.638-71.473
                         L6.992,210.218z"/>
                          <text transform="matrix(1 0 0 1 79.0532 387.5537)" fill="#FFFFFF" font-family="'Lato'" font-size="61.66">5.</text>
@@ -122,12 +49,8 @@
                 </g>
             </g>
         </svg>
-        <img id="logo" src="img/logo-menu.png" alt="">
-        <img id="item1" class="animated opacity" src="img/menui1.png" alt="">
-        <img id="item2" class="animated opacity" src="img/menui2.png" alt="">
-        <img id="item3" class="animated opacity" src="img/menui3.png" alt="">
-        <img id="item4" class="animated opacity" src="img/menui4.png" alt="">
-        <img id="item5" class="animated opacity" src="img/menui5.png" alt="">
-    </nav>
+        -->
 
+    </nav>
 </div>
+<div id="instruction" class="animated zoomIn" ng-show="vm.open === 1" ng-include="vm.instruction"></div>

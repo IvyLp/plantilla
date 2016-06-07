@@ -1,164 +1,23 @@
-<style>
-    section
-    {
-        background-color: #D58123;
-    }
-
-    .logo
-    {
-        position: absolute;
-        top:5px;
-        left:10px;
-    }
-    .bar-info
-    {
-        position: absolute;
-        right: 30px;
-        width: 81%;
-        height: 40px;
-        color: #fff;
-        line-height: 40px;
-        background: #D58123;
-        top: 10px;
-        transform: skewX(-20deg);
-        text-indent: 30px;
-    }
-    .bar-info p {
-        transform: skewX(20deg);
-    }
-
-    .bar-info p span:nth-child(1){font-size: 12pt;}
-    .bar-info p span:nth-child(2) {
-        float: right;
-        margin: 2px 40px;
-        font-size: 26pt;
-        cursor: pointer;
-    }
-
-    .botonera
-    {
-        position: relative;
-        width: 500px;
-        height:370px;
-        margin: 60px auto;
-    }
-    .boton
-    {
-        position: absolute;
-        width: 150px;
-        height: 165px;
-        overflow: hidden;
-        cursor: pointer;
-
-    }
-
-    #btnvideo
-    {
-        background: url('img/item_video_gris.png');
-        background-size: 150px 165px;
-        bottom: 0px;
-        left: 0px;
-    }
-
-    #btnpractica
-    {
-        background: url('img/item_practica_gris.png');
-        background-size: 150px 165px;
-        bottom: 0px;
-        right: 0px;
-    }
-
-    #btnconcepto
-    {
-        background: url('img/item_conceptos_gris.png');
-        background-size: 150px 165px;
-        top: 0px;
-        left: 166px;
-
-    }
-
-
-    .imgcolor
-    {
-        position: absolute;
-        width: 100%;
-        height:100%;
-        opacity: 0;
-        transition:all .3s linear;
-        border:1px d
-    }
-    .boton:hover .imgcolor
-    {
-        opacity:1;
-    }
-    .linea1
-    {
-        width: 130px;
-        height: 0px;
-        border: 1px dashed #757575;
-        position: absolute;
-        bottom: 186px;
-        left: 89px;
-        transform: rotate(-40deg);
-    }
-    .linea2
-    {
-        width: 135px;
-        height: 0px;
-        border: 1px dashed #757575;
-        position: absolute;
-        bottom: 186px;
-        right: 103px;
-        transform: rotate(40deg);
-    }
-    .linea3
-    {
-        width: 232px;
-        height: 0px;
-        border: 1px dashed #757575;
-        position: absolute;
-        bottom: 95px;
-        left: 135px;
-    }
-    .nav-infografia
-    {
-        position: absolute;
-        font-size: 39pt;
-        color:#757575;
-        line-height: 600px;
-        cursor: pointer;
-        opacity: 0.3;
-        transition: all 1s;
-    }
-    .nav-infografia:hover
-    {
-        opacity: 1;
-        color:#75B5A7;
-    }
-</style>
-
 <div class="jumbotron animated slideInRight" style="height: 600px;">
     <img class="logo" src="img/logo2.png" alt="Logo Seguros Bolivar">
-    <div class="bar-info">
-        <p>Curso Gestión del Desempeño / <span>{{eCtrl.subtitulo}}</span> <span class="glyphicon glyphicon-question-sign"></span></p>
+    <a href="descargable/SB_GD_infografias.pdf" target="_blank" class="btn btn-danger" style="position: absolute;top:65px;right: 45px;">Descargar PDF</a>
+    <div class="bar-info bar-bg5">
+        <p>Curso Gestión del Desempeño / <span>{{vm.subtitulo}}</span> <img src="img/btn-info.png"  ng-click="vm.open = 1" style="position: absolute;right: 30px;cursor: pointer;" /></p>
     </div>
     <div class="botonera">
-
-        <div id="btnconcepto" class="boton" ng-click="eCtrl.go('/home/e1')">
-            <img class="imgcolor" src="img/item_conceptos_color.png" alt="">
+        <img class="lineamenu" src="img/lineamenu.png" alt="">
+        <div id="btnconcepto" ng-mouseover="vm.imgconcepto = 'item_conceptos_color.png'" ng-mouseleave="vm.imgconcepto = 'item_conceptos_gris.png'"  class="boton" ng-click="vm.go('/home/e1')">
+            <img ng-src="img/{{vm.imgconcepto}}" alt="">
         </div>
 
-        <div id="btnvideo" class="boton"  ng-click="eCtrl.go('/home/e2')">
-            <img class="imgcolor" src="img/item_video_color.png">
+        <div id="btnvideo" ng-mouseover="vm.imgvideo = 'item_video_color.png'" ng-mouseleave="vm.imgvideo = 'item_video_gris.png'" class="boton"  ng-click="vm.go('/home/e2')">
+            <img ng-src="img/{{vm.imgvideo}}">
         </div>
 
-        <div id="btnpractica" class="boton" ng-click="eCtrl.go('/home/e3')">
-            <img class="imgcolor" src="img/item_practica_color.png" alt="">
+        <div id="btnpractica" ng-mouseover="vm.imgpractica = 'item_practica_color.png'" ng-mouseleave="vm.imgpractica = 'item_practica_gris.png'" class="boton" ng-click="vm.go('/home/e3')">
+            <img ng-src="img/{{vm.imgpractica}}" alt="">
         </div>
-        <div class="linea1"></div>
-        <div class="linea2"></div>
-        <div class="linea3"></div>
     </div>
-    <span class="glyphicon glyphicon-menu-left nav-infografia" style="left: 10px;" ng-click="eCtrl.go('/home/c')"></span>
-    <span class="glyphicon glyphicon-menu-right nav-infografia" style="right: 10px;"  ng-click="eCtrl.go('/home/e')"></span>
+    <a href="#/home" class="btn-home"><span class="glyphicon glyphicon-home"></span></a>
 </div>
+<div id="instruction" class="animated zoomIn" ng-show="vm.open === 1" ng-include="vm.instruction"></div>
