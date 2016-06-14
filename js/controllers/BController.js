@@ -2,9 +2,11 @@
     angular.module('plantilla')
         .controller('BController',BCtrl);
 
-    function BCtrl($location,$rootScope)
+    function BCtrl($location,$rootScope,NavigationProgress)
     {
         var vm = this;
+        NavigationProgress.viewed2();
+        vm.progressB =  NavigationProgress.getProgress().b;
         vm.subtitulo = "¿Cúal es el rol del líder en la gestión de Desempeño?";
         vm.instruction = 'html/instruction.html';
         vm.imgconcepto = "item_conceptos_gris.png";

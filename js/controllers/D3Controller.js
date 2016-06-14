@@ -3,7 +3,7 @@
     angular.module('plantilla')
         .controller('D3Controller',D3Ctrl);
 
-    function D3Ctrl($scope,$location,Activities)
+    function D3Ctrl($scope,$location,Activities,NavigationProgress)
     {
         var vm = this;
         var userA = [];
@@ -24,9 +24,16 @@
             }
             vm.acierto = !vm.acierto;
             if(correctas === 5)
-                vm.mensaje = 'Respuesta Correcta';
+            {
+                vm.retro = 'rtacorrecta.png';
+                vm.redirect = 'd';
+                NavigationProgress.viewedD(2);
+            }
             else
-                vm.mensaje = 'Respuesta Incorrecta';
+            {
+                vm.retro = 'rtaincorrecta.png';
+                vm.redirect = 'd3';
+            }
 
         };
     }

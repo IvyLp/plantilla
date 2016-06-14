@@ -1,17 +1,17 @@
 <div class="animated zoomIn" style="height: 600px;">
+    <a href="#/home/e" class="cerrar"><img src="img/cerrar.png" alt=""></a>
     <div id="infografia">
-        <a href="#/home/e" class="cerrar">X</a>
         <div id="pag1" class="pag">
-
+            <div class="animated fadeInDown delay1000 cuadro_der" style="    left: 0; top: 185px; width: 185px; font-size: 12pt; z-index: 1;">Da clic sobre cada una de las letras</div>
 
             <img class="animated" ng-class="{flipInX :e1Ctrl.estado1}" src="img/infografia5/e1.png" style="position: absolute;width: 200px;top:20px;left: 100px; animation-delay: 1s;">
             <img class="animated" ng-class="{flipInX :e1Ctrl.estado1}" src="img/infografia5/e2.png" style="position: absolute;width: 520px;top:55px;left: 305px; animation-delay: 1s;">
             <div class="smart">
-                <span ng-click="e1Ctrl.opt = 1" ng-class="{activeL: e1Ctrl.opt === 1}">S</span>
+                <span ng-click="e1Ctrl.opt = 1" ng-class="{activeL: e1Ctrl.opt === 1}" class="animated pulse infinite">S</span>
                 <span ng-click="e1Ctrl.opt = 2" ng-class="{activeL: e1Ctrl.opt === 2}">M</span>
                 <span ng-click="e1Ctrl.opt = 3" ng-class="{activeL: e1Ctrl.opt === 3}">A</span>
                 <span ng-click="e1Ctrl.opt = 4" ng-class="{activeL: e1Ctrl.opt === 4}">R</span>
-                <span ng-click="e1Ctrl.opt = 5" ng-class="{activeL: e1Ctrl.opt === 5}">T</span>
+                <span ng-click="e1Ctrl.opt = 5;e1Ctrl.viewed()" ng-class="{activeL: e1Ctrl.opt === 5}">T</span>
             </div>
 
             <img class="oculto" ng-class="{visible :e1Ctrl.estado1}" ng-show="e1Ctrl.opt === 1" src="img/infografia5/e3.png" style="position: absolute;width: 275px;top:335px;left: 300px; animation-delay: 1s;">

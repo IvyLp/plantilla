@@ -1,22 +1,14 @@
 <div class="animated zoomIn" style="height: 600px;">
+    <a href="#/home/e" class="cerrar"><img src="img/cerrar.png" alt=""></a>
     <div id="actividad">
-        <a href="#/home/e" class="cerrar">X</a>
         <div class="pag">
-            <br>
-            <h3 style="text-align: center;">{{e3Ctrl.title}}</h3>
             <div ng-hide="e3Ctrl.acierto">
-                <div class="row">
-                    <br><br>
-                    <video id="player1" src="video/PT1.v1.mp4" width="520" class="center-block" controls>
-                        <source src="video/PT3.v1.mp4" type="video/mp4">
-                        <source src="video/PT3.v1.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <br><br>
-                </div>
+                <br>
+                <h4 style="text-indent: 70px;">{{e3Ctrl.title}}</h4>
+                <br><br><br><br><br>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div id="frase">
+                        <p style="line-height: 40px; font-size: 14pt; text-align: justify;">
                                 Para que nuestras conversaciones sean constructivas, se recomienda tener en cuenta 4 elementos: plantar
                                 <select name='select1' ng-change='e3Ctrl.cambiarvalor()' ng-model="e3Ctrl.select1">
                                     <option value='1'>comportamientos</option>
@@ -46,14 +38,14 @@
                                     <option value='4'>situación</option>
                                 </select>
                                 que permitan conocer el punto de vista del otro, y de ser necesarios, los compromisos para mejorar.
-                            <br>
-                        </div>
+                        </p>
                     </div>
                 </div>
+                <br>
                 <button class="btn btn-success" style="float: right;margin: 0 90px;" ng-click="e3Ctrl.validar()">Enviar</button>
             </div>
             <div ng-show="e3Ctrl.acierto">
-                <h1 style="text-align: center;line-height: 500px;">{{e3Ctrl.mensaje}}</h1>
+                <a ng-href="#/home/{{e3Ctrl.redirect}}" ng-click="e3Ctrl.acierto = !e3Ctrl.acierto"><img style="position: relative;left: 160px;" ng-src="img/{{e3Ctrl.retro}}" alt=""></a>
             </div>
         </div>
     </div>

@@ -1,10 +1,15 @@
 <div class="animated zoomIn" style="height: 600px;">
-    <a href="#/home/e" class="cerrar">X</a>
+    <a href="#/home/e" class="cerrar"><img src="img/cerrar.png" alt=""></a>
     <div id="video">
-        <video controls width="900" height="600">
-            <source src="video/PT3.v1.mp4" type="video/mp4">
-            <source src="video/PT3.v1.ogg" type="video/ogg">
-            Your browser does not support the video tag.
+        <video controls width="900" height="600" class="center-block video-js vjs-default-skin video2"  preload="auto"  data-setup='{"example_option":true}'>
+            <source src="video/video1.mp4" type="video/mp4">
+            <source src="video/video1.ogg" type="video/ogg">
+            <source src="video/video1.webm" type="video/webm">
+            <source src="video/video1.flv" type='video/x-flv'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
         </video>
     </div>
 </div>

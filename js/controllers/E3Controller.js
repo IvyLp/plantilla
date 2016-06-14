@@ -3,7 +3,7 @@
     angular.module('plantilla')
         .controller('E3Controller',E3Ctrl);
 
-    function E3Ctrl($scope,$location,Activities)
+    function E3Ctrl($scope,$location,Activities,NavigationProgress)
     {
         var vm = this;
         var userA = [];
@@ -26,9 +26,16 @@
             }
             vm.acierto = !vm.acierto;
             if(correctas === 4)
-                vm.mensaje = 'Respuesta Correcta';
+            {
+                vm.retro = 'rtacorrecta.png';
+                vm.redirect = 'e';
+                NavigationProgress.viewedE(2);
+            }
             else
-                vm.mensaje = 'Respuesta Incorrecta';
+            {
+                vm.retro = 'rtaincorrecta.png';
+                vm.redirect = 'e3';
+            }
         }
     }
 })();

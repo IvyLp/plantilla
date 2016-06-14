@@ -1,18 +1,11 @@
 <div class="animated zoomIn" style="height: 600px;">
+    <a href="#/home/d" class="cerrar"><img src="img/cerrar.png" alt=""></a>
     <div id="actividad">
-        <a href="#/home/d" class="cerrar" style="right: 10px;">X</a>
-        <div class="pag" style="overflow-y: scroll; overflow-x: hidden;">
-            <h3 style="text-align: center;">{{d3Ctrl.title}}</h3>
+        <div class="pag">
             <div ng-hide="d3Ctrl.acierto">
-                <div class="row">
-                    <br><br>
-                    <video id="player1" src="video/PT1.v1.mp4" width="520" class="center-block" controls>
-                        <source src="video/PT3.v1.mp4" type="video/mp4">
-                        <source src="video/PT3.v1.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <br><br>
-                </div>
+                <br>
+                <h4 style="text-indent: 70px;">{{d3Ctrl.title}}</h4>
+                <br><br>
                 <div class="row">
                     <div class="col-md-5 col-md-offset-1">
                         <p style="height: 70px;" ng-repeat="concept in d3Ctrl.items.concept">{{concept}}</p>
@@ -32,7 +25,7 @@
                 <span>/</span>
             </div>
             <div ng-show="d3Ctrl.acierto">
-                <h1 style="text-align: center;line-height: 500px;">{{d3Ctrl.mensaje}}</h1>
+                <a ng-href="#/home/{{d3Ctrl.redirect}}" ng-click="d3Ctrl.acierto = !d3Ctrl.acierto"><img class="center-block" ng-src="img/{{d3Ctrl.retro}}" alt=""></a>
             </div>
         </div>
     </div>

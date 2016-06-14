@@ -2,14 +2,16 @@
 
 <div id="menu" class="jumbotron animated slideInRight" style="height: 600px;">
     <div class="bar-info bar-bg" style="font-family: 'Lato', sans-serif !important; ">
-        <p>Curso Gestión del Desempeño <span></span> <img src="img/btn-info.png" ng-click="vm.open = 1" style="position: absolute;right: 30px;cursor: pointer;"></p>
+        <p>Curso Gestión del Desempeño <span></span> <img class="animated pulse infinite" src="img/btn-info.png" ng-click="vm.open = 1;vm.etiqueta1 = 1;" style="position: absolute;right: 30px;cursor: pointer;"></p>
     </div>
+    <div ng-if="vm.etiqueta1 != 1" class="animated bounceInUp cuadro_sup" style="left: 1082px; top: 95px; width: 179px; font-size: 12pt;">Da clic y conoce como navegar la herramienta </div>
+    <div ng-if="vm.etiqueta1 === 1" class="animated bounceInUp cuadro_der" style="left: 40px; top: 225px; width: 167px; font-size: 12pt;">Da clic sobre cada uno de los contenidos</div>
     <nav class="center-block">
-        <img src="img/btn1.png" class="item-menu" style="position: absolute;width: 155px;left: -4px;" alt="" ng-click="vm.go('/home/a')">
-        <img src="img/btn2.png" class="item-menu" style="position: absolute;width: 220px; left: 120px;top:-2px;" alt="" ng-click="vm.go('/home/b')">
-        <img src="img/btn3.png" class="item-menu" style="position: absolute;width: 107px; top:111px; left: 250px;" alt="" ng-click="vm.go('/home/c')">
-        <img src="img/btn4.png" class="item-menu" style="position: absolute;width: 212px; top:236px; left: 75px;" alt="" ng-click="vm.go('/home/d')">
-        <img src="img/btn5.png" class="item-menu" style="position: absolute;width: 164px; top:138px; left: -13px;" alt="" ng-click="vm.go('/home/e')">
+        <img src="img/btn1.png" ng-class="{itemfilter: vm.progress.item1 === true, animated: vm.progress.item1 === true}" class="item-menu pulse infinite" style="position: absolute;width: 155px;left: -4px;" alt="" ng-click="vm.go('/home/a')">
+        <img src="img/btn2.png" ng-class="{itemfilter: vm.progress.item2 === true, animated: vm.progress.item2 === true}" class="item-menu pulse infinite" style="position: absolute;width: 220px; left: 120px;top:-2px;" alt="" ng-click="vm.go('/home/b')">
+        <img src="img/btn3.png" ng-class="{itemfilter: vm.progress.item3 === true, animated: vm.progress.item3 === true}" class="item-menu pulse infinite" style="position: absolute;width: 107px; top:111px; left: 250px;" alt="" ng-click="vm.go('/home/c')">
+        <img src="img/btn4.png" ng-class="{itemfilter: vm.progress.item4 === true, animated: vm.progress.item4 === true}" class="item-menu pulse infinite" style="position: absolute;width: 212px; top:236px; left: 75px;" alt="" ng-click="vm.go('/home/d')">
+        <img src="img/btn5.png" ng-class="{itemfilter: vm.progress.item5 === true, animated: vm.progress.item5 === true}" class="item-menu pulse infinite" style="position: absolute;width: 164px; top:138px; left: -13px;" alt="" ng-click="vm.go('/home/e')">
         <img src="img/logo-menu.png" style="position: absolute; top: 109px; left: 106px; width: 150px;" alt="">
         <img src="img/menui1.png" class="animated opacity" style="position: absolute; top: -45px; right: 300px;" alt="">
         <img src="img/menui2.png" class="animated opacity" style="position: absolute; top:-65px; left:255px;" alt="">

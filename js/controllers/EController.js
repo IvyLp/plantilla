@@ -2,9 +2,11 @@
     angular.module('plantilla')
         .controller('EController',ECtrl);
 
-    function ECtrl($location,$rootScope)
+    function ECtrl($location,$rootScope,NavigationProgress)
     {
         var vm = this;
+        NavigationProgress.viewed5();
+        vm.progressE =  NavigationProgress.getProgress().e;
         vm.subtitulo = "Cúales son las etapas de la gestión de Desempeño";
         vm.instruction = 'html/instruction.html';
 

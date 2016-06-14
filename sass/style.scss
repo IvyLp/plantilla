@@ -125,15 +125,21 @@ nav
 .bar-bg4 { background: url('../img/bar4.png'); }
 .bar-bg5 { background: url('../img/bar5.png'); }
 
-.section-bg1{ background: rgb(75,170,24);}
-.section-bg2{ background: rgb(72,183,169);}
-.section-bg3{ background: rgb(147,192,31);}
-.section-bg4{ background: rgb(207,14,75);}
-.section-bg5{ background: rgb(239,131,11);}
+.section-bg0{ background: rgba(0,0,0,.5);}
+.section-bg1{ background: rgba(75,170,24,.7);}
+.section-bg2{ background: rgba(72,183,169,.7);}
+.section-bg3{ background: rgba(147,192,31,.7);}
+.section-bg4{ background: rgba(207,14,75,.7);}
+.section-bg5{ background: rgba(239,131,11,.7);}
 
 .item-menu
 {
   cursor: pointer;
+}
+.itemfilter
+{
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
   -webkit-transition: all .5s;
   -moz-transition:  all .5s;
   -ms-transition:  all .5s;
@@ -141,7 +147,8 @@ nav
   transition:  all .5s;
   &:hover
   {
-    opacity: .7;
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
   }
 }
 #instruction
@@ -250,27 +257,24 @@ nav
 .cerrar
 {
   position: absolute;
-  color: rgba(255, 36, 78, 1) !important;
-  font-size: 28pt;
-  width: 43px;
-  height: 43px;
-  line-height: 40px;
-  text-align: center;
-  right: 0px;
-  top: 0px;
+  right: 110px;
+  top: -25px;
   cursor: pointer;
   z-index: 3000;
-  text-decoration: none;
+  opacity: .9;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+  img
+  {
+    width: 50px;
+  }
 }
 .cerrar:hover
 {
-  text-decoration: none;
-  color:#ff0000;
+  opacity: 1;
 }
 
 .nav-infografia
@@ -284,7 +288,11 @@ nav
 .nav-infografia:hover{
   color: #4BAA18;
 }
-
+/*--------------------- Actividad -------------------------*/
+.video2
+{
+  width: 900px;
+}
 /*-------------------- Actividad ---------------------------*/
 #video
 {

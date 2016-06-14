@@ -1,8 +1,8 @@
 <div class="animated zoomIn" style="height: 600px;">
+    <a href="#/home/a" class="cerrar" ><img src="img/cerrar.png" alt=""></a>
     <div id="infografia">
-
         <div id="pag1" class="pag">
-            <a href="#/home/a" class="cerrar">X</a>
+            <div class="animated fadeInDown delay2000 cuadro_der" style="left: 500px; top: 523px; width: 327px; font-size: 12pt; z-index: 1; border: 1px solid #cecece;">Clic para bajar y ver más información</div>
             <img ng-if="a1Ctrl.estado1" ng-src="img/infografia1/1a.gif" width="100%" alt="">
             <!--<img class="animated" ng-class="{fadeInDown :a1Ctrl.estado1}" src="img/infografia1/e1.png" style="position: absolute;width: 400px;top:30px;left: 160px; animation-delay: .5s;">
             <img class="animated" ng-class="{fadeInLeft :a1Ctrl.estado1}" src="img/infografia1/e2.png" style="position: absolute;width: 130px;top: 65px;left: 75px; animation-delay: 2s;">
@@ -11,7 +11,6 @@
             <img class="animated" ng-class="{zoomIn :a1Ctrl.estado1}" src="img/infografia1/e5.png" style="position: absolute;right: 0; width: 200px; top: 280px; animation-delay: .5s;">
             <img class="animated" ng-class="{fadeInUp :a1Ctrl.estado1}" src="img/infografia1/e6.png" style="position: absolute; top: 477px; left: 1%; width: 98%; animation-delay: .5s;">
             <img class="animated" ng-class="{zoomIn :a1Ctrl.estado1}" src="img/infografia1/e7.png" style="position: absolute; top: 490px; left: 190px; width: 500px; animation-delay: 12s;}">-->
-
             <span class="glyphicon glyphicon-menu-down nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([0,600,2])"></span>
         </div>
         <div id="pag2" class="pag">
@@ -22,7 +21,7 @@
             <img class="animated" ng-class="{fadeInLeft :a1Ctrl.estado2}" src="img/infografia1/e11.png" style="position:absolute; top:676px; left: 40px; width: 250px; animation-delay: 5s;">
             <img class="animated" ng-class="{fadeInRight :a1Ctrl.estado2}" src="img/infografia1/e12.gif" style="position: absolute; top: 894px; left: 379px; width: 461px; animation-delay: 5s;">
             <img class="animated" ng-class="{zoomIn :a1Ctrl.estado2}" src="img/infografia1/e13.png" style="position: absolute; top: 935px; left: 50px; width: 268px; animation-delay: 7s;">-->
-            <span class="glyphicon glyphicon-menu-up nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([600,0,1])"></span>
+            <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="a1Ctrl.saltaSlide([600,0,1])"></span>
             <span class="glyphicon glyphicon-menu-down nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([600,1200,3])"></span>
 
         </div>
@@ -35,12 +34,12 @@
             <img class="animated" ng-class="{zoomIn: a1Ctrl.estado3}" src="img/infografia1/e17.png" style="position: absolute; top: 1560px; left: 276px; width: 120px; animation-delay: 5s;">
             <img class="animated" ng-class="{zoomIn: a1Ctrl.estado3}" src="img/infografia1/e18.png" style="position: absolute; top: 1560px; left: 502px; width: 120px; animation-delay: 6s;">
             <img class="animated" ng-class="{zoomIn: a1Ctrl.estado3}" src="img/infografia1/e19.png" style="position: absolute; top: 1550px; left: 702px; width: 120px; animation-delay: 7s;">-->
-            <span class="glyphicon glyphicon-menu-up nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([1200,600,2])"></span>
-            <span class="glyphicon glyphicon-menu-down nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([1200,1800,4])"></span>
+            <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="a1Ctrl.saltaSlide([1200,600,2])"></span>
+            <span class="glyphicon glyphicon-menu-down nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([1200,1800,4]);a1Ctrl.viewed()"></span>
         </div>
         <div id="pag4" class="pag">
             <img ng-if="a1Ctrl.estado4" ng-src="img/infografia1/1d.gif" width="100%" alt="">
-            <span class="glyphicon glyphicon-menu-up nav-infografia animated pulse infinite" ng-click="a1Ctrl.saltaSlide([1800,1200,3])"></span>
+            <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="a1Ctrl.saltaSlide([1800,1200,3])"></span>
         </div>
     </div>
 </div>

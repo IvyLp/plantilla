@@ -2,9 +2,11 @@
     angular.module('plantilla')
         .controller('DController',DCtrl);
 
-    function DCtrl($location,$rootScope)
+    function DCtrl($location,$rootScope,NavigationProgress)
     {
         var vm = this;
+        NavigationProgress.viewed4();
+        vm.progressD =  NavigationProgress.getProgress().d;
         vm.subtitulo = "Herramientas útiles";
         vm.instruction = 'html/instruction.html';
         vm.imgconcepto = "item_conceptos_gris.png";

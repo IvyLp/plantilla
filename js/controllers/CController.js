@@ -2,9 +2,11 @@
     angular.module('plantilla')
         .controller('CController',CCtrl);
 
-    function CCtrl($location,$rootScope)
+    function CCtrl($location,$rootScope,NavigationProgress)
     {
         var vm = this;
+        NavigationProgress.viewed3();
+        vm.progressC =  NavigationProgress.getProgress().c;
         vm.subtitulo = "Componentes de la gestión de desempeño";
         vm.instruction = 'html/instruction.html';
         vm.imgconcepto = "item_conceptos_gris.png";

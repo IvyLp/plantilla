@@ -1,21 +1,24 @@
 <div class="jumbotron animated slideInRight" style="height: 600px;">
     <img class="logo" src="img/logo2.png" alt="Logo Seguros Bolivar">
-    <a href="descargable/SB_GD_infografias.pdf" target="_blank" class="btn btn-danger" style="position: absolute;top:65px;right: 45px;">Descargar PDF</a>
+    <a href="descargable/Infografia_3.pdf" target="_blank" class="btn btn-danger" style="position: absolute; top: 179px; right: 380px; z-index: 3000;">Descargar PDF</a>
     <div class="bar-info bar-bg3">
         <p>Curso Gestión del Desempeño / <span>{{vm.subtitulo}}</span> <img src="img/btn-info.png" ng-click="vm.open = 1" style="position: absolute;right: 30px;cursor: pointer;" /></p>
     </div>
     <div class="botonera">
         <img class="lineamenu" src="img/lineamenu.png" alt="">
         <div id="btnconcepto" ng-mouseover="vm.imgconcepto = 'item_conceptos_color.png'" ng-mouseleave="vm.imgconcepto = 'item_conceptos_gris.png'"  class="boton" ng-click="vm.go('/home/c1')">
-            <img ng-src="img/{{vm.imgconcepto}}" alt="">
+            <img ng-if="vm.progressC[0] === false" ng-src="img/{{vm.imgconcepto}}" alt="">
+            <img ng-if="vm.progressC[0] === true" ng-src="img/item_conceptos_color.png" alt="">
         </div>
 
         <div id="btnvideo" ng-mouseover="vm.imgvideo = 'item_video_color.png'" ng-mouseleave="vm.imgvideo = 'item_video_gris.png'" class="boton"  ng-click="vm.go('/home/c2')">
-            <img ng-src="img/{{vm.imgvideo}}">
+            <img ng-if="vm.progressC[1] === false" ng-src="img/{{vm.imgvideo}}">
+            <img ng-if="vm.progressC[1] === true" ng-src="img/item_video_color.png">
         </div>
 
         <div id="btnpractica" ng-mouseover="vm.imgpractica = 'item_practica_color.png'" ng-mouseleave="vm.imgpractica = 'item_practica_gris.png'" class="boton" ng-click="vm.go('/home/c3')">
-            <img ng-src="img/{{vm.imgpractica}}" alt="">
+            <img ng-if="vm.progressC[2] === false" ng-src="img/{{vm.imgpractica}}" alt="">
+            <img ng-if="vm.progressC[2] === true" ng-src="img/item_practica_color.png" alt="">
         </div>
     </div>
     <a href="#/home" class="btn-home"><span class="glyphicon glyphicon-home"></span></a>

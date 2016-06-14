@@ -27,7 +27,9 @@
                 controllerAs:'a1Ctrl'
             })
             .when('/home/a2',{
-                templateUrl:'html/a2.html'
+                templateUrl:'html/a2.html',
+                controller: 'A2Controller',
+                controllerAs:'a2Ctrl'
             })
             .when('/home/a3',{
                 templateUrl:'html/a3.html',
@@ -45,7 +47,9 @@
                 controllerAs: 'b1Ctrl'
             })
             .when('/home/b2',{
-                templateUrl:'html/b2.html'
+                templateUrl:'html/b2.html',
+                controller:'B2Controller',
+                controllerAs:'b2Ctrl'
             })
             .when('/home/b3',{
                 templateUrl:'html/b3.html',
@@ -63,7 +67,10 @@
                 controllerAs: 'c1Ctrl'
             })
             .when('/home/c2',{
-                templateUrl:'html/c2.html'
+                templateUrl:'html/c2.html',
+                controller:'C2Controller',
+                controllerASs: 'c2Ctrl'
+
             })
             .when('/home/c3',{
                 templateUrl:'html/c3.html',
@@ -82,7 +89,9 @@
                 controllerAs: 'd1Ctrl'
             })
             .when('/home/d2',{
-                templateUrl:'html/d2.html'
+                templateUrl:'html/d2.html',
+                controller: 'D2Controller',
+                controllerAs: 'd2Ctrl'
             })
             .when('/home/d3',{
                 templateUrl:'html/d3.html',
@@ -100,7 +109,9 @@
                 controllerAs: 'e1Ctrl'
             })
             .when('/home/e2',{
-                templateUrl:'html/e2.html'
+                templateUrl:'html/e2.html',
+                controller: 'E2Controller',
+                controllerAs: 'e2Ctrl'
             })
             .when('/home/e3',{
                 templateUrl:'html/e3.html',

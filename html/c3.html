@@ -1,14 +1,19 @@
 <div class="animated zoomIn" style="height: 600px;">
+    <a href="#/home/c" class="cerrar"><img src="img/cerrar.png" alt=""></a>
     <div id="actividad">
-        <a href="#/home/c" class="cerrar">X</a>
         <div class="pag">
             <div ng-hide="c3Ctrl.acierto">
                 <div class="col-md-12">
                     <br><br><br>
-                    <video id="player1" src="video/PT1.v1.mp4" width="520" class="center-block" controls>
-                        <source src="video/PT3.v1.mp4" type="video/mp4">
-                        <source src="video/PT3.v1.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
+                    <video controls width="500" height="340" class="center-block video-js vjs-default-skin"  preload="auto"  data-setup='{"example_option":true}'>
+                        <source src="video/video1.mp4" type="video/mp4">
+                        <source src="video/video1.ogg" type="video/ogg">
+                        <source src="video/video1.webm" type="video/webm">
+                        <source src="video/video1.flv" type='video/x-flv'>
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a web browser that
+                            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
                     </video>
                 </div>
                 <div class="col-md-12">
@@ -16,13 +21,13 @@
                         <h4>{{c3Ctrl.title}}</h4>
                         <br>
                         <ul>
-                            <li ng-repeat="i in c3Ctrl.items" ng-click="c3Ctrl.validar($index)">{{i}}</li>
+                            <li style="cursor: pointer;font-size: 14pt;" ng-repeat="i in c3Ctrl.items" ng-click="c3Ctrl.validar($index)"><span class="glyphicon glyphicon-unchecked"></span> {{i}}</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div ng-show="c3Ctrl.acierto">
-                <h1 style="text-align: center;line-height: 500px;">{{c3Ctrl.mensaje}}</h1>
+                <a ng-href="#/home/{{c3Ctrl.redirect}}" ng-click="c3Ctrl.acierto = !c3Ctrl.acierto"><img class="center-block" ng-src="img/{{c3Ctrl.retro}}" alt=""></a>
             </div>
         </div>
     </div>

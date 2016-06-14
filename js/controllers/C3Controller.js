@@ -3,7 +3,7 @@
     angular.module('plantilla')
         .controller('C3Controller',C3Ctrl);
 
-    function C3Ctrl($location,Activities)
+    function C3Ctrl($location,Activities,NavigationProgress)
     {
 
         var vm = this;
@@ -13,9 +13,16 @@
         vm.validar = function(key){
             vm.acierto = !vm.acierto;
             if(Activities.activitie3().answer == parseInt(key))
-                vm.mensaje = 'Respuesta Correcta';
+            {
+                vm.retro = 'rtacorrecta.png';
+                vm.redirect = 'c';
+                NavigationProgress.viewedC(2);
+            }
             else
-                vm.mensaje = 'Respuesta Incorrecta';
+            {
+                vm.retro = 'rtaincorrecta.png';
+                vm.redirect = 'c3';
+            }
         };
 
     }

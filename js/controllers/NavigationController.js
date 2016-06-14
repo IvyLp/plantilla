@@ -2,9 +2,10 @@
     angular.module('plantilla')
         .controller('NavigationController', NavigationCtrl);
 
-    function NavigationCtrl($location)
+    function NavigationCtrl($location,NavigationProgress)
     {
         var vm  = this;
+        vm.progress = NavigationProgress.getProgress();
         vm.instruction = 'html/instruction.html';
         vm.mouseenter = function(item)
         {

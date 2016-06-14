@@ -1,0 +1,188 @@
+/* Plantilla para bocadillos v1.1 ©2014 
+Design by INPROEXT
+Released for free under a Creative Commons Attribution 2.5 License */
+
+.cuadro_izq, .cuadro_der, .cuadro_sup, .cuadro_inf {
+	font-size:1em;
+	opacity:0.9;	filter: alpha(opacity=90);
+	position: absolute;
+	padding: 30px;
+	background-color: #FFF818;
+	color: #000;
+	top:100px;
+	left: 250px;
+	width:auto;
+	height:auto;
+	text-align: left;
+    box-shadow: 3px 4px 9px rgba(24, 24, 24, 0.35);
+	animation-fill-mode: both;
+	animation-duration: 1s;
+}
+.cuadro_izq {
+	animation-name: fadeInRight;
+}
+.cuadro_der {
+	animation-name: fadeInLeft;
+}
+.cuadro_sup {
+	animation-name: slideUp;
+}
+.cuadro_inf {
+	animation-name: slideDown;
+}
+
+.fadeIn {
+	animation-name: fadeIn !important;
+	animation-timing-function: ease-in-out;
+}
+.fadeInRight {
+	animation-name: fadeInRight !important;
+}
+.fadeInLeft {
+	animation-name: fadeInLeft !important;
+}
+.slideUp {
+	animation-name: slideUp !important;
+}
+.slideDown {
+	animation-name: slideDown !important;
+}
+
+.cuadro_izq:after, .cuadro_der:after, .cuadro_sup:after, .cuadro_inf:after {
+	content: "";
+	position: absolute;
+	opacity:0.90;	filter: alpha(opacity=90);
+	border-style: solid;
+	border-color: transparent #FFF818;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+.cuadro_izq:after {
+	top: 50px;
+	left: -18px;
+	border-width: 15px 18px 15px 0;
+}
+.cuadro_der:after {
+	top: 50px;
+	right: -18px;
+	border-width: 15px 0 15px 18px;
+}
+.cuadro_sup:after {
+	top: -18px;
+	left: 0px;
+	border-width: 0 15px 18px 15px;
+	border-color: #FFF818 transparent;
+}
+.cuadro_inf:after {
+	bottom: -18px;
+	left: 0px;
+	border-width: 18px 15px 0 15px;
+	border-color: #FFF818 transparent;
+}
+.cuadro_izq.radius, .cuadro_der.radius, .cuadro_sup.radius, .cuadro_inf.radius {
+	border-radius:10px;
+}
+.cuadro_izq.radius:after, .cuadro_der.radius:after{
+	top: 10px;
+}
+.cuadro_sup.radius:after, .cuadro_inf.radius:after{
+	left: 10px;
+}
+
+/* ----------------Animaciones---------------- */
+@keyframes fadeInRight {
+	0% {
+		opacity:0;	filter: alpha(opacity=0);
+		transform: translateX(20px);
+	}
+	90% {
+		opacity:0.9;	filter: alpha(opacity=90);
+		transform: translateX(0);
+	}
+}
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;	filter: alpha(opacity=0);
+		transform: translateX(-20px);
+	}
+	90% {
+		opacity: 0.9;	filter: alpha(opacity=90);
+		transform: translateX(0);
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity:0;	filter: alpha(opacity=0);
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.1);	
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 0.9;	filter: alpha(opacity=90);
+	}
+	100% {
+		opacity:0.9;	filter: alpha(opacity=90);
+		transform: scale(1);
+	}
+}
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%) scaleX(0.5);
+	}
+	30%{
+		transform: translateY(-8%) scaleX(0.5);
+	}	
+	40%{
+		transform: translateY(2%) scaleX(0.5);
+	}
+	50%{
+		transform: translateY(0%) scaleX(1.1);
+	}
+	60%{
+		transform: translateY(0%) scaleX(0.9);		
+	}
+	70% {
+		transform: translateY(0%) scaleX(1.05);
+	}			
+	80%{
+		transform: translateY(0%) scaleX(0.95);		
+	}
+	90% {
+		transform: translateY(0%) scaleX(1.02);
+	}	
+	100%{
+		transform: translateY(0%) scaleX(1);		
+	}
+}
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%) scaleX(0.5);
+	}
+	30%{
+		transform: translateY(8%) scaleX(0.5);
+	}	
+	40%{
+		transform: translateY(-2%) scaleX(0.5);
+	}
+	50%{
+		transform: translateY(0%) scaleX(1.1);
+	}
+	60%{
+		transform: translateY(0%) scaleX(0.9);		
+	}
+	70% {
+		transform: translateY(0%) scaleX(1.05);
+	}			
+	80%{
+		transform: translateY(0%) scaleX(0.95);		
+	}
+	90% {
+		transform: translateY(0%) scaleX(1.02);
+	}	
+	100%{
+		transform: translateY(0%) scaleX(1);		
+	}
+}

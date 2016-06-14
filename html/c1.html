@@ -1,7 +1,7 @@
 
 <div class="animated zoomIn" style="height: 600px;">
+    <a href="#/home/c" class="cerrar"><img src="img/cerrar.png" alt=""></a>
     <div id="infografia">
-        <a href="#/home/c" class="cerrar">X</a>
         <div id="pag1" class="pag">
             <img ng-if="c1Ctrl.estado1" src="img/infografia3/3a.gif" width="100%" alt="">
             <!--<img class="animated" ng-class="{flipInX :c1Ctrl.estado1}" src="img/infografia3/e1.png" style="position: absolute;width: 230px;top:10px;left: 325px; animation-delay: 1s;">
@@ -37,7 +37,7 @@
             <img class="animated" ng-class="{zoomIn :c1Ctrl.estado3}" src="img/infografia3/e21.png" style="position: absolute; width: 210px; top: 1585px; left: 200px; animation-delay: 1s;">-->
 
             <span class="glyphicon glyphicon-menu-up nav-infografia" ng-click="c1Ctrl.saltaSlide([1200,600,2])"></span>
-            <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="c1Ctrl.saltaSlide([1200,1800,4])"></span>
+            <span class="glyphicon glyphicon-menu-down nav-infografia" ng-click="c1Ctrl.saltaSlide([1200,1800,4]);c1Ctrl.viewed()"></span>
         </div>
         <div id="pag4" class="pag">
             <img ng-if="c1Ctrl.estado4" src="img/infografia3/3d.gif" width="100%" alt="">

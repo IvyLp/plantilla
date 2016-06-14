@@ -2,7 +2,7 @@
     angular.module('plantilla')
         .controller('E1Controller',E1Ctrl);
 
-    function E1Ctrl($location,ScrollToService)
+    function E1Ctrl($location,ScrollToService,NavigationProgress)
     {
         var vm = this;
         vm.estado1 = true;
@@ -51,6 +51,10 @@
                     break;
             }
         }
+        vm.viewed = function()
+        {
+            NavigationProgress.viewedE(0);
+        };
     }
 
 
